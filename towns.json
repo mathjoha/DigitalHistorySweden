@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Malmö",
+        "coordinates": [
+            13.035833,
+            55.605833
+        ]
+    },
+    {
+        "name": "Lund",
+        "coordinates": [
+            13.195,
+            55.703889
+        ]
+    },
+    {
+        "name": "Umeå",
+        "coordinates": [
+            20.263889,
+            63.825
+        ]
+    },
+    {
+        "name": "Uppsala",
+        "coordinates": [
+            17.644722,
+            59.858056
+        ]
+    },
+    {
+        "name": "Växjö",
+        "coordinates": [
+            14.809167,
+            56.876944
+        ]
+    },
+    {
+        "name": "Göteborg",
+        "coordinates": [
+            11.9675,
+            57.7075
+        ]
+    }
+]

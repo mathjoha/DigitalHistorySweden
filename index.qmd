@@ -20,7 +20,6 @@ topojson = require("topojson")
 
 
 
-
 # Conference
 
 ```{ojs}
@@ -186,6 +185,9 @@ towns = [
   }
 ]
 
+towns2 = FileAttachment('towns.json').json()
+
+
 
 
 projects = yaml.load(confyaml).filter((d) => d.year >= y).map((d) => ({
@@ -199,4 +201,9 @@ projects
 towns
 
 towns.find((t) => (t.name == 'Malmö')).coordinates
+```
+
+
+```{ojs}
+_.isEqual(towns, towns2)
 ```
