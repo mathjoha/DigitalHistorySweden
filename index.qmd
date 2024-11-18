@@ -35,6 +35,8 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 viewof w = Inputs.range([10,20], {value: 15.35045711798} )
 viewof h = Inputs.range([64,67], {value: 65.3230300391815})
 viewof z = Inputs.range([200, 1700], {value: 1457.07444492817})
+viewof y = Inputs.range([2018, 2025], {value: 2018, step: 1})
+
 
 ```
 
@@ -110,8 +112,10 @@ map = {
   //   .attr("fill", markerColor)
   //   .attr("stroke", markerColor).append('title').text('lark');
 
-  svg.selectAll('Projects')
-  .data(projects).join('circle')
+  svg.selectAll('circle')
+  .data(projects)
+  .enter()
+  .append('circle')
   .attr("cx", d => projection(d.coordinates)[0])
   .attr("cy", d => projection(d.coordinates)[1])
   .attr("r", 5)
@@ -133,19 +137,66 @@ map = {
 
 yaml = require('js-yaml')
 projaml = FileAttachment('./projects.yaml').text()
-confyaml = FileAttachment('./projects.yaml').text()
+confyaml = FileAttachment('./conferences.yaml').text()
 
 
-projects = yaml.load(projaml).map((d) => ({
+towns = [
+  {
+  name: 'Malmö',
+  coordinates: [
+    13.035833,
+    55.605833
+  ]
+  },
+  {
+  name: 'Lund',
+  coordinates: [
+    13.195,
+    55.703889
+  ]
+  },
+  {
+  name: 'Umeå',
+  coordinates: [
+    20.263889,
+    63.825
+    ]
+  },
+  {
+  name: 'Uppsala',
+  coordinates: [
+    17.644722,
+    59.858056
+
+  ]
+  },
+  {
+  name: 'Växjö',
+  coordinates: [
+    14.809167,
+    56.876944
+  ]
+  },
+  {
+  name: 'Göteborg',
+  coordinates: [
+    11.9675,
+    57.7075
+  ]
+  }
+]
+
+
+
+projects = yaml.load(confyaml).filter((d) => d.year >= y).map((d) => ({
   name : d.name,
   region: d.region,
-  coordinates : d.coordinates != undefined ?  d.coordinates : [
-        17.3111576795578,
-        60.328395068168417
-      ]
+  coordinates : towns.find((t) => (t.name == d.region)).coordinates
 }))
 
 projects
 
+towns
 
+towns.find((t) => (t.name == 'Malmö')).coordinates
 ```
