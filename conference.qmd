@@ -3,4 +3,5 @@ title: conference listing
 listing:
     contents:
         - "conferences.yaml"
+    sort: year desc
 ---

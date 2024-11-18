@@ -143,7 +143,7 @@ towns = FileAttachment('towns.json').json()
 
 raw_points = [].concat(
 yaml.load(confyaml).map((d) => ({
-  name : d.name,
+  name : d.title,
   region: d.region,
   coordinates : towns.find((t) => (t.name == d.region)).coordinates,
   type: 'conference',
