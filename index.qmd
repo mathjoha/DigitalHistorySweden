@@ -132,7 +132,7 @@ map = {
 
 
 ```{ojs}
-
+//| echo: false
 
 yaml = require('js-yaml')
 projaml = FileAttachment('./projects.yaml').text()
@@ -159,15 +159,9 @@ yaml.load(projaml).map((d) => ({
 }))
 )
 
-
-
 raw_points
-```
 
-
-```{ojs}
 points = raw_points.filter((d) => (d.year >= y || d.type == 'project'))
-
 
 points
 ```

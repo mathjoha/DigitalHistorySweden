@@ -1,5 +1,6 @@
 import yaml
 from pathlib import Path
+from collections import Counter
 
 project_yaml_path = Path(__file__).parent / 'projects.yaml'
 
@@ -29,6 +30,13 @@ if __name__ == "__main__":
         raw_yaml = f.read()
 
     projects_dicts = yaml.safe_load(raw_yaml)
+
+    names_count = Counter((proj['name'] for proj in project_dicts))
+
+    duplicate_names = [name, count for name, count in names_counts.items() if count > 1]
+
+    if len(duplicate_names) > 0:
+        raise ValueError(f'Duplicate project name found: {duplicate_names}')
 
     sorted_projects = sorted(projects_dicts, keys=sort_order0)
 
