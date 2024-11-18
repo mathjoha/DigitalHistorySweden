@@ -141,13 +141,22 @@ confyaml = FileAttachment('./conferences.yaml').text()
 towns = FileAttachment('towns.json').json()
 
 
-
-
-points = yaml.load(confyaml).filter((d) => d.year >= y).map((d) => ({
+points = [].concat(
+yaml.load(confyaml).filter((d) => d.year >= y).map((d) => ({
   name : d.name,
   region: d.region,
-  coordinates : towns.find((t) => (t.name == d.region)).coordinates
+  coordinates : towns.find((t) => (t.name == d.region)).coordinates,
+  type: 'conference'
+})),
+yaml.load(projaml).map((d) => ({
+  name : d.name,
+  region: d.region,
+  coordinates : towns.find((t) => (t.name == d.region)).coordinates,
+  type: 'project'
 }))
+)
+
+
 
 points
 
