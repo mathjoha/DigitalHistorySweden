@@ -1,2 +1,6 @@
 - name: ProjectName
   region: Skåne
+  year: 2000
+- name: ProjectName2
+  region: Skåne
+  year: 2001

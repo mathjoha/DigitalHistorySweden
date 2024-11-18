@@ -30,6 +30,14 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 
 ```
 
+
+```{ojs}
+viewof w = Inputs.range([10,20], {value: 15.35045711798} )
+viewof h = Inputs.range([64,67], {value: 65.3230300391815})
+viewof z = Inputs.range([200, 1700], {value: 1457.07444492817})
+
+```
+
 ```{ojs}
 //| echo: false
 
@@ -39,8 +47,8 @@ markers = [
     "geometry": {
       "type": "Point",
       "coordinates": [
-        17.2111576795578,
-        60.928395068168417
+        w,
+        h
       ]
     }
   }
@@ -51,15 +59,15 @@ markers = [
 //| echo: false
 
 map = {
-  const chartWidth = 300;
-  const chartHeight = 300;
+  const chartWidth = 400;
+  const chartHeight = 800;
   const backgroundColor = "#EAF2FA";
   const landColor = "#09A573";
   const landStroke = "#FCF5E9";
   const markerColor = "#E26F99";
 
   const projection = d3.geoMercator()
-                      .scale([500])
+                      .scale([z])
                       .center(markers[0].geometry.coordinates)
                       .translate([chartWidth / 3, chartHeight / 3]);
 
@@ -107,9 +115,9 @@ map = {
   .attr("cx", d => projection(d.coordinates)[0])
   .attr("cy", d => projection(d.coordinates)[1])
   .attr("r", 5)
-    .attr("fill-opacity", 0.3)
-    .attr("fill", markerColor)
-    .attr("stroke", markerColor).append('title').text(d => d.name);
+    .attr("fill-opacity", 0.9)
+    .attr("fill", 'blue')
+    .attr("stroke", markerColor).append('title').text(d => d.name );
 
   return svg.node();
 }
@@ -125,6 +133,8 @@ map = {
 
 yaml = require('js-yaml')
 projaml = FileAttachment('./projects.yaml').text()
+confyaml = FileAttachment('./projects.yaml').text()
+
 
 projects = yaml.load(projaml).map((d) => ({
   name : d.name,
