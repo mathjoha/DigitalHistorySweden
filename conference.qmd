@@ -1,0 +1,6 @@
+---
+title: conference listing
+listing:
+    contents:
+        - "conferences.yaml"
+---
