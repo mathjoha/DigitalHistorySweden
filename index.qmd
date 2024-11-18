@@ -4,10 +4,6 @@ toc: false
 
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
 
 ```{ojs}
 //| echo: false
@@ -15,12 +11,6 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 d3 = require("d3")
 topojson = require("topojson")
 ```
-
-# Projects
-
-
-
-# Conference
 
 ```{ojs}
 //| echo: false
@@ -140,9 +130,7 @@ map = {
 //| echo: false
 
 
-viewof selection = Inputs.table(gathered_points, {required: false, columns: ['name', 'region', 'year']})
-
-
+viewof selection = Inputs.table(gathered_points, {required: false, columns: ['name', 'region', 'year'], rows: 36, width: 440})
 
 points = selection.length ? selection : gathered_points
 
