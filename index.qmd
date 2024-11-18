@@ -1,0 +1,141 @@
+---
+title: "Digital History"
+toc: true
+theme: flatly
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+
+```{ojs}
+//| echo: false
+
+d3 = require("d3")
+topojson = require("topojson")
+```
+
+# Projects
+
+
+
+
+# Conference
+
+```{ojs}
+//| echo: false
+
+geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geojson/refs/heads/master/GeoJSON/swedish_provinces.geojson").then((response) => response.json())
+
+```
+
+```{ojs}
+//| echo: false
+
+markers = [
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        17.2111576795578,
+        60.928395068168417
+      ]
+    }
+  }
+]
+```
+
+```{ojs}
+//| echo: false
+
+map = {
+  const chartWidth = 300;
+  const chartHeight = 300;
+  const backgroundColor = "#EAF2FA";
+  const landColor = "#09A573";
+  const landStroke = "#FCF5E9";
+  const markerColor = "#E26F99";
+
+  const projection = d3.geoMercator()
+                      .scale([500])
+                      .center(markers[0].geometry.coordinates)
+                      .translate([chartWidth / 3, chartHeight / 3]);
+
+  const pathGenerator = d3.geoPath(projection);
+
+  const svg = d3.create('svg')
+                .attr("title", "Map")
+                .attr('width', chartWidth)
+                .attr('height', chartHeight)
+
+  svg.append("rect")
+    .attr("width", chartWidth)
+    .attr("height", chartHeight)
+    .attr('fill', backgroundColor);
+
+  svg.selectAll('path')
+        .data(geoswe.features)
+        .join('path')
+        .attr('d', pathGenerator)
+        .attr('fill', landColor)
+        .attr('stroke', landStroke)
+        .attr('stroke-width', 1);
+
+  svg.selectAll('path2')
+        .data(geoswe.features.filter((d) => d.properties.name == "Halland"))
+        .join('path')
+        .attr('d', pathGenerator)
+        .attr('fill', 'red')
+        .attr('stroke', 'black')
+        .attr('stroke-width', 1).append('title').text('Halland');
+
+
+  // svg.selectAll("circle")
+  //   .data(markers)
+  //   .join("circle")
+  //   .attr("cx", d => projection(d.geometry.coordinates)[0])
+  //   .attr("cy", d => projection(d.geometry.coordinates)[1])
+  //   .attr("r", 4)
+  //   .attr("fill-opacity", 0.5)
+  //   .attr("fill", markerColor)
+  //   .attr("stroke", markerColor).append('title').text('lark');
+
+  svg.selectAll('Projects')
+  .data(projects).join('circle')
+  .attr("cx", d => projection(d.coordinates)[0])
+  .attr("cy", d => projection(d.coordinates)[1])
+  .attr("r", 5)
+    .attr("fill-opacity", 0.3)
+    .attr("fill", markerColor)
+    .attr("stroke", markerColor).append('title').text(d => d.name);
+
+  return svg.node();
+}
+
+```
+
+
+### yaml test
+
+
+```{ojs}
+
+
+yaml = require('js-yaml')
+projaml = FileAttachment('./projects.yaml').text()
+
+projects = yaml.load(projaml).map((d) => ({
+  name : d.name,
+  region: d.region,
+  coordinates : d.coordinates != undefined ?  d.coordinates : [
+        17.3111576795578,
+        60.328395068168417
+      ]
+}))
+
+projects
+
+
+```
