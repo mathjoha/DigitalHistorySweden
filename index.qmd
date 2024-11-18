@@ -112,7 +112,7 @@ map = {
   //   .attr("stroke", markerColor).append('title').text('lark');
 
   svg.selectAll('circle')
-  .data(projects)
+  .data(points)
   .enter()
   .append('circle')
   .attr("cx", d => projection(d.coordinates)[0])
@@ -138,72 +138,17 @@ yaml = require('js-yaml')
 projaml = FileAttachment('./projects.yaml').text()
 confyaml = FileAttachment('./conferences.yaml').text()
 
-
-towns = [
-  {
-  name: 'Malmö',
-  coordinates: [
-    13.035833,
-    55.605833
-  ]
-  },
-  {
-  name: 'Lund',
-  coordinates: [
-    13.195,
-    55.703889
-  ]
-  },
-  {
-  name: 'Umeå',
-  coordinates: [
-    20.263889,
-    63.825
-    ]
-  },
-  {
-  name: 'Uppsala',
-  coordinates: [
-    17.644722,
-    59.858056
-
-  ]
-  },
-  {
-  name: 'Växjö',
-  coordinates: [
-    14.809167,
-    56.876944
-  ]
-  },
-  {
-  name: 'Göteborg',
-  coordinates: [
-    11.9675,
-    57.7075
-  ]
-  }
-]
-
-towns2 = FileAttachment('towns.json').json()
+towns = FileAttachment('towns.json').json()
 
 
 
 
-projects = yaml.load(confyaml).filter((d) => d.year >= y).map((d) => ({
+points = yaml.load(confyaml).filter((d) => d.year >= y).map((d) => ({
   name : d.name,
   region: d.region,
   coordinates : towns.find((t) => (t.name == d.region)).coordinates
 }))
 
-projects
+points
 
-towns
-
-towns.find((t) => (t.name == 'Malmö')).coordinates
-```
-
-
-```{ojs}
-_.isEqual(towns, towns2)
 ```
