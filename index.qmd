@@ -82,9 +82,22 @@ map = {
         .attr('d', pathGenerator)
         .attr('fill', landColor)
         .attr('stroke', landStroke)
-        .attr('stroke-width', 1)
-        .append('title').text((d) => d.properties.name);
+        .attr('stroke-width', 1);
 
+  path.style('cursor', 'pointer').on('click', clicked);
+
+  path.append('title').text((d) => d.properties.name);
+
+  function clicked (event, p){
+    const t = svg.transition().duration(750)
+
+    console.log(p.properties.name)
+
+    path.transition().style('fill', null);
+
+    d3.select(this).transition().style('fill', 'red');
+
+  }
 
 
   return svg.node();
