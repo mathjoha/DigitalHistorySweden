@@ -73,6 +73,7 @@ map = {
                 .attr("title", "Map")
                 .attr('width', chartWidth)
                 .attr('height', chartHeight)
+                .on('dblclick', reset);
 
 
   const path = svg.append('g').
@@ -91,13 +92,20 @@ map = {
   function clicked (event, p){
     const t = svg.transition().duration(750)
 
-    console.log(p.properties.name)
-
-    path.transition().style('fill', null);
+    path.transition().style('fill', 'white');
 
     d3.select(this).transition().style('fill', 'red');
 
+
   }
+
+  function reset() {
+    path.transition().style("fill", null);
+    svg.transition().duration(750).call(
+      // zoom.transform,
+      d3.zoomIdentity,
+      d3.zoomTransform(svg.node()).invert([chartWidth / 2, chartHeight / 2]));
+}
 
 
   return svg.node();
