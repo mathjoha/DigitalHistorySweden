@@ -107,6 +107,23 @@ map = {
       d3.zoomTransform(svg.node()).invert([chartWidth / 2, chartHeight / 2]));
 }
 
+ const circles = svg.selectAll('circle');
+
+  circles
+  .data(points)
+  .join('circle')
+  .attr("cx", d => projection(d.coordinates)[0])
+  .attr("cy", d => projection(d.coordinates)[1])
+  .attr("r", 5)
+    .attr("fill-opacity", 0.9)
+    .attr("fill", 'blue')
+    .attr("stroke", markerColor)
+
+ circles.append('title')
+    .text(d => d.name );
+
+
+
 
   return svg.node();
 }
