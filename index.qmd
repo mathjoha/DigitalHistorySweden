@@ -96,17 +96,19 @@ map = {
 
     d3.select(this).transition().style('fill', 'red');
 
-
+    car()
 
   }
 
   function reset() {
+    car('Lund')
 
     path.transition().style("fill", null);
     svg.transition().duration(750).call(
       // zoom.transform,
       d3.zoomIdentity,
       d3.zoomTransform(svg.node()).invert([chartWidth / 2, chartHeight / 2]));
+
 }
 
  const circles = svg.append('g').selectAll('circle');
@@ -123,8 +125,7 @@ map = {
     .append('title').text((d) => (d.name) );
 
 
-
-
+  car()
   return svg.node();
 }
 
@@ -135,34 +136,38 @@ map = {
 
 ::: {.g-col-3}
 
-<table></table>
-
 :::
 
 :::
 
 ```{ojs}
-function car () {
+//| echo: false
 
+function car (a) {
 
-  const table = d3.select("table");
-  const tr = table.selectAll('tr.month')
-    .data([1])
+  const table = d3.selectAll('.g-col-3');
+
+  table.selectAll('div').remove();
+
+  const cardata = a == undefined ? gathered_points : gathered_points.filter((d) => (d.region == a));
+
+  table
+  .style('width', '500 px')
+  .selectAll('div')
+    .data(cardata)
     .enter()
-    .append('tr').attr('class', 'month')
-    .attr('title', d => `${d}`)
+    .append('div')
+    .text(d=> d.name)
 
-    tr.selectAll('td.year').data(conf_data)
-    .enter()
-    .append('td').attr('class', 'year')
-    .attr('title', d=> d.region)
-    .text(d => d.name);
+  console.log(a, table, cardata)
+
+
 
 }
 
 conf_data
 
-car()
+// car()
 ```
 
 
@@ -176,7 +181,9 @@ points = selection.length ? selection : gathered_points
 
 ```
 
-
+```{ojs}
+gathered_points.length
+```
 
 
 ```{ojs}
