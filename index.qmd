@@ -82,41 +82,8 @@ map = {
         .attr('d', pathGenerator)
         .attr('fill', landColor)
         .attr('stroke', landStroke)
-        .attr('stroke-width', 1).append('title').text((d) => d.properties.name);
-
-  const path2 = svg.append('g')
-    .selectAll('path2')
-        .data(geoswe.features.filter((d) => d.properties.name == "Halland"))
-        .join('path')
-        .attr('d', pathGenerator)
-        .attr('fill', 'red')
-        .attr('stroke', 'black')
         .attr('stroke-width', 1)
-        .append('title')
-        .text('Halland');
-
-  path2
-    .style('cursor', 'pointer')
-    .on('click', function() {
-      console.log('halland')
-    })
-
-
-  const circles = svg.selectAll('circle');
-
-  circles
-  .data(points)
-  .join('circle')
-  .attr("cx", d => projection(d.coordinates)[0])
-  .attr("cy", d => projection(d.coordinates)[1])
-  .attr("r", 5)
-    .attr("fill-opacity", 0.9)
-    .attr("fill", 'blue')
-    .attr("stroke", markerColor)
-    .append('title')
-    .text(d => d.name );
-
-
+        .append('title').text((d) => d.properties.name);
 
 
 
