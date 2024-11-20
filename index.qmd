@@ -92,7 +92,7 @@ map = {
   function clicked (event, p){
     const t = svg.transition().duration(750)
 
-    path.transition().style('fill', 'white');
+    path.transition().style('fill', d3.color('gray'));
 
     d3.select(this).transition().style('fill', 'red');
 
