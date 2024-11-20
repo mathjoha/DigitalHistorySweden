@@ -97,9 +97,11 @@ map = {
     d3.select(this).transition().style('fill', 'red');
 
 
+
   }
 
   function reset() {
+
     path.transition().style("fill", null);
     svg.transition().duration(750).call(
       // zoom.transform,
@@ -120,8 +122,6 @@ map = {
     .attr("stroke", markerColor)
     .append('title').text((d) => (d.name) );
 
-  circles.append('text').text((d) => (d.name.slice(1,3)));
-
 
 
 
@@ -135,6 +135,37 @@ map = {
 
 ::: {.g-col-3}
 
+<table></table>
+
+:::
+
+:::
+
+```{ojs}
+function car () {
+
+
+  const table = d3.select("table");
+  const tr = table.selectAll('tr.month')
+    .data([1])
+    .enter()
+    .append('tr').attr('class', 'month')
+    .attr('title', d => `${d}`)
+
+    tr.selectAll('td.year').data(conf_data)
+    .enter()
+    .append('td').attr('class', 'year')
+    .attr('title', d=> d.region)
+    .text(d => d.name);
+
+}
+
+conf_data
+
+car()
+```
+
+
 ```{ojs}
 //| echo: false
 
@@ -145,9 +176,6 @@ points = selection.length ? selection : gathered_points
 
 ```
 
-:::
-
-:::
 
 
 
