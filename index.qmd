@@ -102,18 +102,6 @@ map = {
     })
 
 
-
-
-  // svg.selectAll("circle")
-  //   .data(markers)
-  //   .join("circle")
-  //   .attr("cx", d => projection(d.geometry.coordinates)[0])
-  //   .attr("cy", d => projection(d.geometry.coordinates)[1])
-  //   .attr("r", 4)
-  //   .attr("fill-opacity", 0.5)
-  //   .attr("fill", markerColor)
-  //   .attr("stroke", markerColor).append('title').text('lark');
-
   const circles = svg.selectAll('circle');
 
   circles
@@ -127,6 +115,7 @@ map = {
     .attr("stroke", markerColor)
     .append('title')
     .text(d => d.name );
+
 
 
 
