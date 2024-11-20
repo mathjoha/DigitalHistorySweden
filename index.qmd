@@ -29,6 +29,7 @@ viewof z = Inputs.range([200, 1700], {value: 1457.07444492817})
 viewof y = Inputs.range([2018, 2025], {value: 2018, step: 1})
 ```
 
+
 ```{ojs}
 //| echo: false
 
@@ -73,26 +74,34 @@ map = {
                 .attr('width', chartWidth)
                 .attr('height', chartHeight)
 
-  svg.append("rect")
-    .attr("width", chartWidth)
-    .attr("height", chartHeight)
-    .attr('fill', backgroundColor);
 
-  svg.selectAll('path')
+  const path = svg.append('g').
+      selectAll('path')
         .data(geoswe.features)
         .join('path')
         .attr('d', pathGenerator)
         .attr('fill', landColor)
         .attr('stroke', landStroke)
-        .attr('stroke-width', 1);
+        .attr('stroke-width', 1).append('title').text((d) => d.properties.name);
 
-  svg.selectAll('path2')
+  const path2 = svg.append('g')
+    .selectAll('path2')
         .data(geoswe.features.filter((d) => d.properties.name == "Halland"))
         .join('path')
         .attr('d', pathGenerator)
         .attr('fill', 'red')
         .attr('stroke', 'black')
-        .attr('stroke-width', 1).append('title').text('Halland');
+        .attr('stroke-width', 1)
+        .append('title')
+        .text('Halland');
+
+  path2
+    .style('cursor', 'pointer')
+    .on('click', function() {
+      console.log('halland')
+    })
+
+
 
 
   // svg.selectAll("circle")
@@ -105,16 +114,22 @@ map = {
   //   .attr("fill", markerColor)
   //   .attr("stroke", markerColor).append('title').text('lark');
 
-  svg.selectAll('circle')
+  const circles = svg.selectAll('circle');
+
+  circles
   .data(points)
-  .enter()
-  .append('circle')
+  .join('circle')
   .attr("cx", d => projection(d.coordinates)[0])
   .attr("cy", d => projection(d.coordinates)[1])
   .attr("r", 5)
     .attr("fill-opacity", 0.9)
     .attr("fill", 'blue')
-    .attr("stroke", markerColor).append('title').text(d => d.name );
+    .attr("stroke", markerColor)
+    .append('title')
+    .text(d => d.name );
+
+
+
 
   return svg.node();
 }
