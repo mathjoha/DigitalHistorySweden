@@ -96,12 +96,12 @@ map = {
 
     d3.select(this).transition().style('fill', 'red');
 
-    car()
+    car(p.properties.name)
 
   }
 
   function reset() {
-    car('Lund')
+    car()
 
     path.transition().style("fill", null);
     svg.transition().duration(750).call(
@@ -197,8 +197,9 @@ towns = FileAttachment('towns.json').json()
 
 conf_data = yaml.load(confyaml).map((d) => ({
   name : d.title,
-  region: d.region,
-  coordinates : towns.find((t) => (t.name == d.region)).coordinates,
+  town: d.town,
+  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
+  region : towns.find((t) => (t.name == d.town)).region,
   type: 'conference',
   year: d.year
 }))
@@ -207,8 +208,9 @@ raw_points = [].concat(
 conf_data,
 yaml.load(projaml).map((d) => ({
   name : d.name,
-  region: d.region,
+  town: d.region,
   coordinates : towns.find((t) => (t.name == d.region)).coordinates,
+  coordinates : towns.find((t) => (t.name == d.region)).region,
   type: 'project',
   year: d.year
 
