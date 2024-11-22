@@ -132,9 +132,6 @@ function car (a) {
     .append('div')
     .text(d=> d.name)
 
-  console.log(a, table, cardata)
-
-
 
 }
 
