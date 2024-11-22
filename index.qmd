@@ -19,13 +19,6 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 
 ```
 
-
-```{ojs}
-//| echo: false
-
-viewof y = Inputs.range([2018, 2025], {value: 2018, step: 1})
-```
-
 ::: {.grid}
 
 ::: {.g-col-1}
@@ -183,8 +176,6 @@ yaml.load(projaml).map((d) => ({
 }))
 )
 
-sorted_ = raw_points.sort((d) => (d.end, d.name))
-
-gathered_points = raw_points.filter((d) => (d.year >= y || d.type == 'project'))
+gathered_points = raw_points.sort((d) => (d.end, d.name))
 
 ```
