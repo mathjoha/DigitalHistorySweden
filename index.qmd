@@ -131,6 +131,13 @@ function car (a) {
     .append('h4').text(d=> d.name)
     .append('h5').text(d => `${d.town}`)
     .append('span').style('float', 'right').text(d => `${d.days} ${d.year}`)
+    .data(cardata.filter( (d) => (d.type == 'project')))
+    .enter().append('div')
+    .append('h4').text(d=> d.name)
+    .append('h5').text(d=> d.town)
+    .append('span').style('float', 'right').text(d => `${d.year}-${d.end}`)
+    .append('br').append(a).attr('href', (d => d.url)).text('visit')
+
 
 }
 
