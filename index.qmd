@@ -1,5 +1,5 @@
 ---
-title: "Digital History"
+title: "Digital History in Sweden"
 toc: false
 
 ---
@@ -73,6 +73,7 @@ map = {
                 .attr("title", "Map")
                 .attr('width', chartWidth)
                 .attr('height', chartHeight)
+                .on('dblclick', reset);
 
 
   const path = svg.append('g').
@@ -82,30 +83,38 @@ map = {
         .attr('d', pathGenerator)
         .attr('fill', landColor)
         .attr('stroke', landStroke)
-        .attr('stroke-width', 1).append('title').text((d) => d.properties.name);
+        .attr('stroke-width', 1);
 
-  const path2 = svg.append('g')
-    .selectAll('path2')
-        .data(geoswe.features.filter((d) => d.properties.name == "Halland"))
-        .join('path')
-        .attr('d', pathGenerator)
-        .attr('fill', 'red')
-        .attr('stroke', 'black')
-        .attr('stroke-width', 1)
-        .append('title')
-        .text('Halland');
+  path.style('cursor', 'pointer').on('click', clicked);
 
-  path2
-    .style('cursor', 'pointer')
-    .on('click', function() {
-      console.log('halland')
-    })
+  path.append('title').text((d) => d.properties.name);
 
+  function clicked (event, p){
+    const t = svg.transition().duration(750)
 
-  const circles = svg.selectAll('circle');
+    path.transition().style('fill', d3.color('gray'));
+
+    d3.select(this).transition().style('fill', 'red');
+
+    car(p.properties.name)
+
+  }
+
+  function reset() {
+    car()
+
+    path.transition().style("fill", null);
+    svg.transition().duration(750).call(
+      // zoom.transform,
+      d3.zoomIdentity,
+      d3.zoomTransform(svg.node()).invert([chartWidth / 2, chartHeight / 2]));
+
+}
+
+ const circles = svg.append('g').selectAll('circle');
 
   circles
-  .data(points)
+  .data(conf_data)
   .join('circle')
   .attr("cx", d => projection(d.coordinates)[0])
   .attr("cy", d => projection(d.coordinates)[1])
@@ -113,13 +122,10 @@ map = {
     .attr("fill-opacity", 0.9)
     .attr("fill", 'blue')
     .attr("stroke", markerColor)
-    .append('title')
-    .text(d => d.name );
+    .append('title').text((d) => (d.name) );
 
 
-
-
-
+  car()
   return svg.node();
 }
 
@@ -129,6 +135,41 @@ map = {
 :::
 
 ::: {.g-col-3}
+
+:::
+
+:::
+
+```{ojs}
+//| echo: false
+
+function car (a) {
+
+  const table = d3.selectAll('.g-col-3');
+
+  table.selectAll('div').remove();
+
+  const cardata = a == undefined ? gathered_points : gathered_points.filter((d) => (d.region == a));
+
+  table
+  .style('width', '500 px')
+  .selectAll('div')
+    .data(cardata)
+    .enter()
+    .append('div')
+    .text(d=> d.name)
+
+  console.log(a, table, cardata)
+
+
+
+}
+
+conf_data
+
+// car()
+```
+
 
 ```{ojs}
 //| echo: false
@@ -140,10 +181,9 @@ points = selection.length ? selection : gathered_points
 
 ```
 
-:::
-
-:::
-
+```{ojs}
+gathered_points.length
+```
 
 
 ```{ojs}
@@ -155,25 +195,32 @@ confyaml = FileAttachment('./conferences.yaml').text()
 
 towns = FileAttachment('towns.json').json()
 
+conf_data = yaml.load(confyaml).map((d) => ({
+  name : d.title,
+  town: d.town,
+  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
+  region : towns.find((t) => (t.name == d.town)).region,
+  type: 'conference',
+  year: d.year,
+  end: d.end
+}))
+conf_data.sort(d => d.end)
 
 raw_points = [].concat(
-yaml.load(confyaml).map((d) => ({
-  name : d.title,
-  region: d.region,
-  coordinates : towns.find((t) => (t.name == d.region)).coordinates,
-  type: 'conference',
-  year: d.year
-})),
+conf_data,
 yaml.load(projaml).map((d) => ({
   name : d.name,
-  region: d.region,
+  town: d.region,
   coordinates : towns.find((t) => (t.name == d.region)).coordinates,
+  coordinates : towns.find((t) => (t.name == d.region)).region,
   type: 'project',
-  year: d.year
+  year: d.year,
+  end: d.end
 
 }))
 )
 
+raw_points.sort((d) => (d.end, d.name))
 
 gathered_points = raw_points.filter((d) => (d.year >= y || d.type == 'project'))
 

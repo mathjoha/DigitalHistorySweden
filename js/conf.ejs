@@ -1,0 +1,25 @@
+```{=html}
+<lu>
+	<% for (const item of items) { %>
+
+		<h4>
+			<%= item.title %> <span style="float:right;">
+					<%= item.year %>
+				</span>
+		</h4>
+
+		<p>
+		<p><%= item.theme %><i>
+			<span style="float:right;"><%- item.days %>
+			</span>
+			</i>
+		<br>
+		<a href=<%= item.url%>>visit</a>
+			<a href=<%= item.programme%>>programme</a><i>
+			<span style="float:right;"><%= item.town %>
+			</span>
+		</i></p>
+
+		<% } %>
+</lu>
+```

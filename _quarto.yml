@@ -1,14 +1,16 @@
 project:
   type: website
+  preview:
+    port: 7117
 
 website:
-  title: "Dhswe"
+  title: "Digital History in Sweden"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
       - href: conference.qmd
+    right:
+      - about.qmd
+
 
 format:
   html:

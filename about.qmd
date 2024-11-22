@@ -1,0 +1,8 @@
+---
+title: "About"
+---
+
+This is a small curated list of Swedish Digital History projects, conferences
+and activities.
+
+[suggest project](mailto:hark?subject=DHSWE - Project Suggestion&body=name: NAME%0Durl: URL%0Dyear: START_YEAR%0Dend: END_YEAR (optional)%0DTown: PROJECT_HQ)
