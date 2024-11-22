@@ -178,13 +178,6 @@ confyaml = FileAttachment('./conference.yaml').text()
 
 towns = FileAttachment('towns.json').json()
 
-function logname (town){
-  console.log(town)
-  console.log(towns.find((t) => (t.name == town)))
-}
-
-yaml.load(confyaml).map(d => logname(d.town))
-
 conf_data = yaml.load(confyaml).map((d) => ({
   name : d.title,
   town: d.town,
@@ -194,7 +187,7 @@ conf_data = yaml.load(confyaml).map((d) => ({
   year: d.year,
   end: d.end
 }))
-conf_data.sort(d => d.end)
+sorted_c = conf_data.sort(d => d.end)
 
 raw_points = [].concat(
 conf_data,
@@ -210,7 +203,7 @@ yaml.load(projaml).map((d) => ({
 }))
 )
 
-raw_points.sort((d) => (d.end, d.name))
+sorted_ = raw_points.sort((d) => (d.end, d.name))
 
 gathered_points = raw_points.filter((d) => (d.year >= y || d.type == 'project'))
 
