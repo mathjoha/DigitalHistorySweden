@@ -201,8 +201,10 @@ conf_data = yaml.load(confyaml).map((d) => ({
   coordinates : towns.find((t) => (t.name == d.town)).coordinates,
   region : towns.find((t) => (t.name == d.town)).region,
   type: 'conference',
-  year: d.year
+  year: d.year,
+  end: d.end
 }))
+conf_data.sort(d => d.end)
 
 raw_points = [].concat(
 conf_data,
@@ -212,11 +214,13 @@ yaml.load(projaml).map((d) => ({
   coordinates : towns.find((t) => (t.name == d.region)).coordinates,
   coordinates : towns.find((t) => (t.name == d.region)).region,
   type: 'project',
-  year: d.year
+  year: d.year,
+  end: d.end
 
 }))
 )
 
+raw_points.sort((d) => (d.end, d.name))
 
 gathered_points = raw_points.filter((d) => (d.year >= y || d.type == 'project'))
 
