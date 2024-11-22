@@ -5,6 +5,7 @@ listing:
     sort: date desc
     fields: ['date', 'town',  'title', 'url', 'programme']
     date-format: iso
+    template: ./js/conf.ejs
 ---
 
 Digital History in Sweden is a small conference held every or every other year.

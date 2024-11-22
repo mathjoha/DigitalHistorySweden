@@ -1,0 +1,20 @@
+```{=html}
+<lu>
+	<% for (const item of items) { %>
+
+		<h4>
+			<%= item.title %> <span style="float:right;">
+					<%= item.start %>-<%= item.end %>
+				</span>
+		</h4>
+
+		<p>
+		<p><i>
+				<%= item.level %>
+					<%= item.type %><span style="float:right;"><%- item.school %>, <%- item.city %>, <%- item.country %>
+						</span>
+			</i></p>
+
+		<% } %>
+</lu>
+```
