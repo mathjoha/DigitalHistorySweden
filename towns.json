@@ -6,13 +6,22 @@
             55.605833
         ],
         "region": "Skåne"
-    },    {
+    },
+    {
         "name": "Skövde",
         "coordinates": [
             13.85,
             58.383333
         ],
         "region": "Västra Götaland"
+    },
+    {
+        "name": "Linköping",
+        "coordinates": [
+            15.625278,
+            58.415833
+        ],
+        "region": "Östra Götaland"
     },
     {
         "name": "Karlstad",
