@@ -23,28 +23,7 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 ```{ojs}
 //| echo: false
 
-viewof w = Inputs.range([10,20], {value: 15.35045711798} )
-viewof h = Inputs.range([64,67], {value: 65.3230300391815})
-viewof z = Inputs.range([200, 1700], {value: 1457.07444492817})
 viewof y = Inputs.range([2018, 2025], {value: 2018, step: 1})
-```
-
-
-```{ojs}
-//| echo: false
-
-markers = [
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        w,
-        h
-      ]
-    }
-  }
-]
 ```
 
 ::: {.grid}
