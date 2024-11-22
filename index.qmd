@@ -182,18 +182,20 @@ points = selection.length ? selection : gathered_points
 ```
 
 ```{ojs}
-gathered_points.length
-```
-
-
-```{ojs}
 //| echo: false
 
 yaml = require('js-yaml')
 projaml = FileAttachment('./projects.yaml').text()
-confyaml = FileAttachment('./conferences.yaml').text()
+confyaml = FileAttachment('./conference.yaml').text()
 
 towns = FileAttachment('towns.json').json()
+
+function logname (town){
+  console.log(town)
+  console.log(towns.find((t) => (t.name == town)))
+}
+
+yaml.load(confyaml).map(d => logname(d.town))
 
 conf_data = yaml.load(confyaml).map((d) => ({
   name : d.title,
@@ -212,7 +214,7 @@ yaml.load(projaml).map((d) => ({
   name : d.name,
   town: d.region,
   coordinates : towns.find((t) => (t.name == d.region)).coordinates,
-  coordinates : towns.find((t) => (t.name == d.region)).region,
+  region : towns.find((t) => (t.name == d.region)).region,
   type: 'project',
   year: d.year,
   end: d.end

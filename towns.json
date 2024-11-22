@@ -46,5 +46,22 @@
             57.7075
         ],
         "region": "Västra Götaland"
+    },
+    {
+        "name": "Stockholm",
+        "coordinates": [
+            18.068611,
+            59.329444
+        ],
+        "region": "Stockholm"
+    },
+    {
+        "name": "Örebro",
+        "coordinates": [
+            15.2075,
+            59.273889
+        ],
+        "region": "Örebro"
     }
+
 ]
