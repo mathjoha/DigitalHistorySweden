@@ -5,7 +5,7 @@ listing:
     sort: year desc
     template: ./js/conf.ejs
     exclude:
-        date: TBD
+        days: TBD
 ---
 
 _Digital History in Sweden_ is a small conference held every once or two years.
