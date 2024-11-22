@@ -2,11 +2,12 @@
 title: Conference
 listing:
     contents: "conference.yaml"
-    sort: date desc
-    fields: ['date', 'town',  'title', 'url', 'programme']
-    date-format: iso
+    sort: year desc
     template: ./js/conf.ejs
+    exclude:
+        date: TBD
 ---
 
 _Digital History in Sweden_ is a small conference held every once or two years.
-ls
+So far six of these conferences have been held and the seventh one has been
+annouced to take place in Örebro during the first half of 2026.
