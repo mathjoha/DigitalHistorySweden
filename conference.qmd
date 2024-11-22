@@ -1,7 +1,10 @@
 ---
-title: conference listing
+title: Conference
 listing:
-    contents:
-        - "conferences.yaml"
-    sort: year desc
+    contents: "conference.yaml"
+    sort: date desc
+    fields: ['date', 'town',  'title', 'url', 'programme']
+    date-format: iso
 ---
+
+Digital History in Sweden is a small conference held every or every other year.

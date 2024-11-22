@@ -1,5 +1,5 @@
 ---
-title: "Digital History"
+title: "Digital History in Sweden"
 toc: false
 
 ---
