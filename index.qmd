@@ -167,19 +167,8 @@ function car (a) {
 
 conf_data
 
-// car()
 ```
 
-
-```{ojs}
-//| echo: false
-
-
-viewof selection = Inputs.table(gathered_points, {required: false, columns: ['name', 'region', 'year'], rows: 36, width: 440})
-
-points = selection.length ? selection : gathered_points
-
-```
 
 ```{ojs}
 //| echo: false
