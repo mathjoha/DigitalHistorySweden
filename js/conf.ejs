@@ -4,16 +4,20 @@
 
 		<h4>
 			<%= item.title %> <span style="float:right;">
-					<%= item.start %>-<%= item.end %>
+					<%= item.year %>
 				</span>
 		</h4>
 
 		<p>
-		<p><i>
-				<%= item.level %>
-					<%= item.type %><span style="float:right;"><%- item.school %>, <%- item.city %>, <%- item.country %>
-						</span>
+		<p><%= item.theme %><i>
+			<span style="float:right;"><%- item.days %>
+			</span>
 			</i></p>
+		<p><a href=<%= item.url%>>visit</a>
+			<a href=<%= item.programme%>>programme</a><i>
+			<span style="float:right;"><%= item.town %>
+			</span>
+		</i></p>
 
 		<% } %>
 </lu>

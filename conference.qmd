@@ -8,4 +8,5 @@ listing:
     template: ./js/conf.ejs
 ---
 
-Digital History in Sweden is a small conference held every or every other year.
+_Digital History in Sweden_ is a small conference held every once or two years.
+ls
