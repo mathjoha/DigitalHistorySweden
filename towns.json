@@ -8,6 +8,14 @@
         "region": "Skåne"
     },
     {
+        "name": "Karlstad",
+        "coordinates": [
+            13.504167,
+            59.378333
+        ],
+        "region": "Värmland"
+    },
+    {
         "name": "Lund",
         "coordinates": [
             13.195,
