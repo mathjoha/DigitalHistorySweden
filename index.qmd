@@ -62,12 +62,13 @@ map = {
   const landStroke = "#FCF5E9";
   const markerColor = "#E26F99";
 
+
   const projection = d3.geoMercator()
-                      .scale([z])
-                      .center(markers[0].geometry.coordinates)
-                      .translate([chartWidth / 3, chartHeight / 3]);
+                      .translate([chartWidth / 3, chartHeight / 3])
+                      .fitSize([chartWidth, chartHeight], geoswe);
 
   const pathGenerator = d3.geoPath(projection);
+
 
   const svg = d3.create('svg')
                 .attr("title", "Map")
