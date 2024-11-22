@@ -1,9 +1,7 @@
 ---
-title: "Digital History in Sweden"
 toc: false
-
+css: custom.scss
 ---
-
 
 ```{ojs}
 //| echo: false
@@ -16,7 +14,6 @@ topojson = require("topojson")
 //| echo: false
 
 geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geojson/refs/heads/master/GeoJSON/swedish_provinces.geojson").then((response) => response.json())
-
 ```
 
 ::: {.grid}
@@ -27,8 +24,8 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 //| echo: false
 
 map = {
-  const chartWidth = 400;
-  const chartHeight = 800;
+  const chartWidth = 350;
+  const chartHeight = 700;
   const backgroundColor = "#EAF2FA";
   const landColor = "#09A573";
   const landStroke = "#FCF5E9";
@@ -107,9 +104,11 @@ map = {
 
 :::
 
-::: {.g-col-3}
+::: {.g-col-3 .listcol}
 
 :::
+
+
 
 :::
 
