@@ -126,13 +126,13 @@ function car (a) {
   table
   .style('width', '500 px')
   .selectAll('div')
-    .data(cardata)
-    .enter()
-    .append('div')
-    .text(d=> d.name)
-
+    .data(cardata.filter( (d) => (d.type == "conference")))
+    .enter().append('div')
+    .append('h4').text(d=> d.name)
+    .append('h5').text(d => `${d.town} ${d.days} ${d.year}`)
 
 }
+
 
 
 ```
@@ -154,7 +154,9 @@ conf_data = yaml.load(confyaml).map((d) => ({
   region : towns.find((t) => (t.name == d.town)).region,
   type: 'conference',
   year: d.year,
-  end: d.end
+  end: d.end,
+  days: d.days
+
 }))
 sorted_c = conf_data.sort(d => d.end)
 
@@ -167,7 +169,7 @@ yaml.load(projaml).map((d) => ({
   region : towns.find((t) => (t.name == d.region)).region,
   type: 'project',
   year: d.year,
-  end: d.end
+  end: d.end,
 
 }))
 )
