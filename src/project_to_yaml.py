@@ -17,7 +17,7 @@ def write_project(project_data):
     )
 
     with open(projects, "a", encoding="utf8") as project_yaml:
-        project_yaml.write(yaml_lines)
+        project_yaml.write(yaml_lines + "\n")
 
 
 if __name__ == "__main__":
