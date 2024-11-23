@@ -20,3 +20,11 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
+-   repo: local
+    hooks:
+    -   id: format_projects.yaml
+        name: proj_sort.py
+        entry: python proj_sort.py
+        alway_run: true
+        pass_filenames: false
+        language: python
