@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 
-def uu_parse(url):
+def umu_parse(url):
 
     resp = requests.get(url)
 

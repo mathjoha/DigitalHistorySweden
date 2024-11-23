@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs
 
 from get_lu import lu_parse
-from get_uu import uu_parse
+from get_umu import umu_parse
 from paths import url_file
 from project_to_yaml import write_project
 
