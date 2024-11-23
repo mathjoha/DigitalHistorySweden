@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup as bs
 
 from get_lu import lu_parse
+from get_uu import uu_parse
 from paths import url_file
 from project_to_yaml import write_project
 
@@ -15,5 +16,8 @@ if __name__ == "__main__":
     for url in load_urls():
         if "portal.research.lu.se" in url:
             project_data = lu_parse(url)
+        if url.startswith("https://www.umu.se/en/research/projects/"):
+            project_data = uu_parse(url)
 
         write_project(project_data)
+        break
