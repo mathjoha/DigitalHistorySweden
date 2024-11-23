@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 
-def gu_parse(url):
+def oru_parse(url):
 
     resp = requests.get(url)
 
@@ -24,7 +24,7 @@ def gu_parse(url):
     )
 
     overview_div = soup.find(
-        lambda tag: tag.name == "div" and tag.text.strip().startswith("Project period")
+        lambda tag: tag.name == "div" and tag.text.strip().startswith("Project status")
     )
 
     start, end, *_ = re.findall(r"\d{4}", overview_div.get_text())
@@ -33,6 +33,6 @@ def gu_parse(url):
         "name": title.strip(),
         "year": int(start),
         "end": int(end),
-        "town": "Göteborg",
+        "town": "Örebro",
         "url": url,
     }
