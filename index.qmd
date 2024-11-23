@@ -167,6 +167,7 @@ yaml.load(projaml).map((d) => ({
   type: 'project',
   year: d.year,
   end: d.end,
+  url: d.url
 
 }))
 )
