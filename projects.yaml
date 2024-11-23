@@ -30,9 +30,19 @@
   url: https://wasp-hs.org/project/quantifying-culture-a-study-of-ai-and-cultural-heritage-collections/
   year: 2021
 - end: 2024
+  name: SweTerror
+  town: "G\xF6teborg"
+  url: https://www.sweterror.se/
+  year: 2021
+- end: 2024
   name: 'International Ideas at UNESCO: Digital Approaches to Global Conceptual History'
   town: Uppsala
   url: https://inidun.github.io/
+  year: 2020
+- end: 2024
+  name: Labour's Memory
+  town: Uppsala
+  url: https://laboursmemory.org/
   year: 2020
 - end: 2023
   name: 'Televising Information: Audiovisual Communication of Swedish Government Agencies'
@@ -59,6 +69,11 @@
   name: Digital Periegesis
   town: Uppsala
   url: https://www.periegesis.org/en/
+  year: 2018
+- end: 2024
+  name: 'DECRYPT: Decryption of historical manuscripts'
+  town: Uppsala
+  url: https://de-crypt.org/
   year: 2018
 - end: 2019
   name: Digital Models. Techno-historical collections, digital humanities & narratives
