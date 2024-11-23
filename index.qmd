@@ -128,12 +128,10 @@ function car (a) {
   .selectAll('div')
     .data(cardata.filter( (d) => (d.type == "conference")))
     .join('div').html(d => `<h4>${d.name}</h4><h5>${d.town}<span style="float:right;">${d.days} ${d.year}</span></h5>`)
-    .data(cardata.filter( (d) => (d.type == 'project')))
+    .data(cardata)
     .enter().insert('div')
-    .join('div').html(d => `<h4>${d.name}</h4><h5>${d.town}<span style="float:right;">${d.days} ${d.year}</span></h5><a href="${d.url}">visit</a>`)
-
+    .join('div').html(d => `<h4>${d.name} <span style="float:right;"><a href="${d.url}">visit</a></span></h4><h5> ${d.town}<span style="float:right;">${d.year}-${d.end}</span></h5>`)
 }
-
 ```
 
 
@@ -163,9 +161,9 @@ raw_points = [].concat(
 conf_data,
 yaml.load(projaml).map((d) => ({
   name : d.name,
-  town: d.region,
-  coordinates : towns.find((t) => (t.name == d.region)).coordinates,
-  region : towns.find((t) => (t.name == d.region)).region,
+  town: d.town,
+  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
+  region : towns.find((t) => (t.name == d.town)).region,
   type: 'project',
   year: d.year,
   end: d.end,
