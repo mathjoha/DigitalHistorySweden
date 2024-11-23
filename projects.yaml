@@ -19,6 +19,16 @@
   town: Lund
   url: https://modernatider1936.se/
   year: 2023
+- end: 2027
+  name: Historical Treaties of Southeast Asia
+  town: "V\xE4xj\xF6"
+  url: https://sea-treaties.org/
+  year: 2022
+- end: 2026
+  name: Manuscripta
+  town: Stockholm
+  url: https://www.manuscripta.se/
+  year: 2022
 - end: 2025
   name: 'The Cultural Imaginary of Terrorism: Close and Distant Readings of Political
     Terror in Cold War Sweden'
@@ -55,6 +65,11 @@
   town: Lund
   url: https://portal.research.lu.se/en/projects/televising-information-audiovisual-communication-of-swedish-gover
   year: 2020
+- end: 2026
+  name: DIGARV
+  town: Lund
+  url: https://www.digarv.se/
+  year: 2019
 - end: 2024
   name: 'Mapping Lived Religion: Medieval cults of saints in Sweden and Finland'
   town: "V\xE4xj\xF6"
@@ -87,3 +102,8 @@
   town: "Ume\xE5"
   url: https://www.umu.se/en/research/projects/digital-models.-techno-historical-collections-digital-humanities--narratives-of-industrialisation/
   year: 2016
+- end: 2017
+  name: SweCarCol
+  town: Uppsala
+  url: https://swecarcol.ub.uu.se/
+  year: 2012
