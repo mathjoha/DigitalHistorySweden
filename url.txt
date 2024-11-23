@@ -1,3 +1,4 @@
+https://mau.diva-portal.org/smash/project.jsf?dswid=4775&pid=project%3A2493
 https://www.umu.se/en/research/projects/digital-files--the-press-interface-in-1800/
 https://www.umu.se/en/research/projects/streaming-heritage-following-files-in-digital-music-distribution/
 https://www.umu.se/en/research/projects/european-history-reloaded-curation-and-appropriation-of-digital-audiovisual-heritage/
@@ -17,3 +18,5 @@ https://portal.research.lu.se/sv/projects/srnb-en-databas-f%C3%B6r-svenskt-digit
 https://portal.research.lu.se/sv/projects/historical-research-and-digitization-of-rare-books
 https://portal.research.lu.se/en/projects/the-people-here-are-nosy-the-swedish-diplomats-physical-and-metap
 https://portal.research.lu.se/en/projects/crafting-war-memories-art-and-affect-in-ukrainian-virtual-museums
+https://www.umu.se/en/research/projects/encoding-and-linking-swedish-censuses-swecens/
+https://www.umu.se/en/research/projects/hercul---prioritization-of-climate-threatened-cultural-heritage--attitudes-and-methods/
