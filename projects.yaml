@@ -9,6 +9,12 @@
   town: Lund
   url: https://contentiousgatherings.github.io/website/
   year: 2024
+- end: 2028
+  name: "Need-based school funding \u2013 a path to promoting good working conditions\
+    \ and reducing teacher turnover?"
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/need-based-school-funding-a-path-to-promoting-good-working-condit
+  year: 2024
 - end: 2026
   name: "The State Advertises: Visual Public Information in Sweden, 1930\u20131990"
   town: Lund
@@ -172,11 +178,6 @@
   town: Lund
   url: https://portal.research.lu.se/en/projects/digital-integration-across-disciplines-advancing-cultural-heritag
   year: 2021
-- end: 2023
-  name: DigitalHistory@Lund
-  town: Lund
-  url: https://portal.research.lu.se/en/projects/digitalhistorylund
-  year: 2021
 - end: 2022
   name: "F\xF6rfattarens hand: Till handskriftens litteraturhistoria"
   town: "Malm\xF6"
@@ -206,6 +207,11 @@
   name: Labour's Memory
   town: Uppsala
   url: https://laboursmemory.org/
+  year: 2020
+- end: 2023
+  name: DigitalHistory@Lund
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/digitalhistorylund-2
   year: 2020
 - end: 2023
   name: 'Televising Information: Audiovisual Communication of Swedish Government Agencies'
