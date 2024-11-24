@@ -1,4 +1,5 @@
 from random import shuffle
+from time import sleep
 
 import requests
 from bs4 import BeautifulSoup as bs
@@ -30,7 +31,7 @@ def load_urls():
 
 
 if __name__ == "__main__":
-    for url in load_urls():
+    for i, url in enumerate(load_urls()):
         if "portal.research.lu.se" in url:
             project_data = lu_parse(url)
         elif url.startswith("https://www.umu.se/en/research/projects/"):
@@ -47,6 +48,8 @@ if __name__ == "__main__":
             project_data = mau_parse(url)
         elif url.startswith("https://www.su.se/forskning/forskningsprojekt"):
             project_data = su_parse(url)
+        else:
+            raise ValueError(url)
 
         write_project(project_data)
         saved_response = requests.get("https://web.archive.org/save/" + url)
