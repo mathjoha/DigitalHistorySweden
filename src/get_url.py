@@ -1,3 +1,5 @@
+from random import shuffle
+
 import requests
 from bs4 import BeautifulSoup as bs
 
@@ -14,8 +16,17 @@ from project_to_yaml import write_project
 
 def load_urls():
     with open(url_file, "r", encoding="utf8") as f:
-        for line in f.readlines():
-            yield line.strip()
+        lines = list(set(f.readlines().filter(lambda line: line != "")))
+
+    shuffle(lines)
+
+    while len(lines) > 0:
+        line = lines.pop()
+        yield line.strip()
+        with open(url_file, "w", encoding="utf8") as f:
+            f.writelines(sorted(lines))
+
+    yield None
 
 
 if __name__ == "__main__":
