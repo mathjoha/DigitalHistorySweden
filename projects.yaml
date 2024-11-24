@@ -430,6 +430,11 @@
   town: Lund
   url: https://portal.research.lu.se/en/projects/market-capitalisation-of-listed-companies-19751987
   year: 2010
+- end: 2049
+  name: "CVA \u2013 Corpus Vasorum Antiquorum"
+  town: "Malm\xF6"
+  url: https://www.su.se/forskning/forskningsprojekt/cva-corpus-vasorum-antiquorum
+  year: 2009
 - end: 2023
   name: Gender and Work
   town: Uppsala
