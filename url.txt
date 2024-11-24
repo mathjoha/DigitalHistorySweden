@@ -1,5 +1,3 @@
-https://mau.se/en/research/projects/swedish-parliamentary-debates/
-https://mau.diva-portal.org/smash/project.jsf?dswid=4775&pid=project%3A2493
 https://www.umu.se/en/research/projects/digital-files--the-press-interface-in-1800/
 https://www.umu.se/en/research/projects/streaming-heritage-following-files-in-digital-music-distribution/
 https://www.umu.se/en/research/projects/european-history-reloaded-curation-and-appropriation-of-digital-audiovisual-heritage/
@@ -39,3 +37,4 @@ https://www.oru.se/english/research/research-projects/rp/?rdb=p2170
 https://www.oru.se/english/research/research-projects/rp/?rdb=p2729
 https://www.oru.se/english/research/research-projects/rp/?rdb=p2549
 https://portal.research.lu.se/en/projects/diverging-innovation-trends-in-finland-and-sweden-1970-2013
+https://mau.diva-portal.org/smash/project.jsf?dswid=4775&pid=project%3A2493
