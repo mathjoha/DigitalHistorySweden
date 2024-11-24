@@ -86,6 +86,29 @@
             59.273889
         ],
         "region": "Örebro"
+    },
+    {
+        "name": "Borås",
+        "coordinates": [
+            12.940278,
+            57.721111
+        ],
+        "region": "Västra Götaland"
+    },
+    {
+        "name": "Arjeplog",
+        "coordinates": [
+            17.883333,
+            66.05
+        ],
+        "region": "Norrbotten"
+    },
+    {
+        "name": "Uddevalla",
+        "coordinates": [
+            11.938056,
+            58.349167
+        ],
+        "region": "Bohuslän"
     }
-
 ]
