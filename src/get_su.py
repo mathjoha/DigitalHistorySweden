@@ -16,7 +16,7 @@ def su_parse(url):
 
     h1 = soup.find("h1")
 
-    h1.find("span").clea()
+    h1.find("span").clear()
 
     title = (
         h1.get_text()
