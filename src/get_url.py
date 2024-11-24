@@ -41,6 +41,17 @@ def load_urls():
                     assert b"failed" not in second
 
 
+def archive(url):
+    saved_response = requests.get("https://web.archive.org/save/" + url)
+    saved_url = saved_response.url
+    while not saved_url.startswith("https://web.archive.org/web/"):
+        sleep(10)
+        saved_response = requests.get("https://web.archive.org/save/" + url)
+        saved_url = saved_response.url
+
+    assert saved_url.endswith(url)
+
+
 if __name__ == "__main__":
     assert b"On branch main" not in subprocess.check_output(["git", "status"])
     for i, url in enumerate(load_urls()):
@@ -67,7 +78,4 @@ if __name__ == "__main__":
             raise ValueError(url)
 
         write_project(project_data)
-        saved_response = requests.get("https://web.archive.org/save/" + url)
-        saved_url = saved_response.url
-        assert saved_url.startswith("https://web.archive.org/web/")
-        assert saved_url.endswith(url)
+        archive(url)
