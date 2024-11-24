@@ -86,6 +86,13 @@
             59.273889
         ],
         "region": "Örebro"
+    },
+    {
+        "name": "Borås",
+        "coordinates": [
+            12.940278,
+            57.721111
+        ],
+        "region": "Västra Götaland"
     }
-
 ]
