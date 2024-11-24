@@ -399,6 +399,11 @@
   town: "Ume\xE5"
   url: https://www.umu.se/en/research/projects/encoding-and-linking-swedish-censuses-swecens/
   year: 2011
+- end: 2013
+  name: A Digitalized Historyculture
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/a-digitalized-historyculture
+  year: 2010
 - end: 2023
   name: Gender and Work
   town: Uppsala
