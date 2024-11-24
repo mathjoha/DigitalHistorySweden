@@ -240,6 +240,11 @@
   url: https://www.uu.se/en/research/research-projects/project?query=P18-0852:1_RJ
   year: 2019
 - end: 2021
+  name: "Historia p\xE5 n\xE4tet"
+  town: "Malm\xF6"
+  url: https://mau.diva-portal.org/smash/project.jsf?pid=project%3A2493&dswid=5638
+  year: 2019
+- end: 2021
   name: "Labour Conflicts by location 1859\u20131938"
   town: Lund
   url: https://portal.research.lu.se/en/projects/labour-conflicts-by-location-18591938
@@ -399,6 +404,12 @@
   name: "Digital files \u2013 the press interface in 1800"
   town: "Ume\xE5"
   url: https://www.umu.se/en/research/projects/digital-files--the-press-interface-in-1800/
+  year: 2014
+- end: 2015
+  name: "Dolda skatter. Tillg\xE4ngligg\xF6rande av De la Gardieska arkivet vid Universitetsbiblioteket\
+    \ i Lund"
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/dolda-skatter-tillg%C3%A4ngligg%C3%B6rande-av-de-la-gardieska-arkivet-vid-u
   year: 2014
 - end: 2015
   name: With history as compass
