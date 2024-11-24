@@ -194,6 +194,11 @@
   town: Lund
   url: https://portal.research.lu.se/en/projects/digital-integration-across-disciplines-advancing-cultural-heritag
   year: 2021
+- end: 2023
+  name: Queerlit
+  town: "G\xF6teborg"
+  url: https://www.gu.se/forskning/queerlit
+  year: 2021
 - end: 2022
   name: "F\xF6rfattarens hand: Till handskriftens litteraturhistoria"
   town: "Malm\xF6"
@@ -503,9 +508,14 @@
   town: Lund
   url: https://portal.research.lu.se/en/projects/dolda-skatter-tillg%C3%A4ngligg%C3%B6rande-av-de-la-gardieska-arkivet-vid-u
   year: 2014
+- end: 2014
+  name: Swedish Money supply 1619 until present
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/swedish-money-supply-1619-until-present
+  year: 2014
 - end: 2024
   name: Monastica
-  town: "Malm\xF6"
+  town: Lund
   url: https://monastica.ht.lu.se/
   year: 2013
 - end: 2015
