@@ -29,6 +29,9 @@ def sort_order(project: dict):
     if project["end"] < project["year"]:
         raise ValueError("Project {project} ends before it starts")
 
+    if ".su.se" in project["url"]:
+        project["town"] = "Stockholm"
+
     return (-project["year"], -project["end"], project["name"], project["town"])
 
 

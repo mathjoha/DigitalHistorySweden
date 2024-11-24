@@ -11,6 +11,7 @@ from get_gu import gu_parse
 from get_lu import lu_parse
 from get_mau import mau_parse
 from get_oru import oru_parse
+from get_raa import raa_parse
 from get_su import su_parse
 from get_umu import umu_parse
 from get_uu import uu_parse
@@ -82,6 +83,8 @@ if __name__ == "__main__":
             project_data = mau_parse(url)
         elif url.startswith("https://www.su.se/forskning/forskningsprojekt"):
             project_data = su_parse(url)
+        elif url.startswith("https://fou-anslag.raa.se/raa/default.asp?"):
+            project_data = raa_parse(url)
         else:
             raise ValueError(url)
 

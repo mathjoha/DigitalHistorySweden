@@ -36,6 +36,6 @@ def su_parse(url):
         "name": title.strip(),
         "year": int(start),
         "end": int(end),
-        "town": "Malmö",
+        "town": "Stockholm",
         "url": url,
     }

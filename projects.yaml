@@ -1,7 +1,7 @@
 - end: 2029
   name: "Den skrivna lettiskans sv\xE5ra f\xF6delse genom \xF6vers\xE4ttning p\xE5\
     \ 1600-talet"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/den-skrivna-lettiskans-sv%C3%A5ra-f%C3%B6delse-genom-%C3%B6vers%C3%A4ttning-p%C3%A5-1600-talet
   year: 2024
 - end: 2028
@@ -22,7 +22,7 @@
   year: 2024
 - end: 2025
   name: "AI i runologins tj\xE4nst"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/ai-i-runologins-tj%C3%A4nst
   year: 2024
 - end: 2027
@@ -32,7 +32,7 @@
   year: 2023
 - end: 2027
   name: Nationell forskarskola i digital filologi
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/nationell-forskarskola-i-digital-filologi
   year: 2023
 - end: 2026
@@ -48,7 +48,7 @@
   year: 2023
 - end: 2026
   name: "Svenska runstenar f\xF6r allm\xE4nheten"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/svenska-runstenar-f%C3%B6r-allm%C3%A4nheten
   year: 2023
 - end: 2026
@@ -64,7 +64,7 @@
   year: 2023
 - end: 2025
   name: "Museers digitalisering - hur f\xF6r\xE4ndrar det l\xE4randet?"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/museers-digitalisering-hur-f%C3%B6r%C3%A4ndrar-det-l%C3%A4randet
   year: 2023
 - end: 2024
@@ -92,6 +92,11 @@
   town: Stockholm
   url: https://www.manuscripta.se/
   year: 2022
+- end: 2026
+  name: The origin of horses and their contribution to the success of the Vikings
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/the-origin-of-horses-and-their-contribution-to-the-success-of-the
+  year: 2022
 - end: 2025
   name: Before the Romans. Addressing the interplay between genetic and cultural variation
     in Pre-Roman Italy
@@ -100,7 +105,7 @@
   year: 2022
 - end: 2025
   name: "Ett fastighetesprisindex f\xF6r G\xF6teborg 1637\u20131875"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/ett-fastighetesprisindex-f%C3%B6r-g%C3%B6teborg-1637-1875
   year: 2022
 - end: 2025
@@ -112,6 +117,11 @@
   name: "Kamrateffekter och utbildningsoj\xE4mlikheten mellan stad och land"
   town: Lund
   url: https://portal.research.lu.se/en/projects/kamrateffekter-och-utbildningsoj%C3%A4mlikheten-mellan-stad-och-land
+  year: 2022
+- end: 2025
+  name: Spinning women revisited - Work and life before industrialisation
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/spinning-women-revisited-work-and-life-before-industrialisation
   year: 2022
 - end: 2025
   name: 'The Cultural Imaginary of Terrorism: Close and Distant Readings of Political
@@ -137,8 +147,14 @@
   url: https://www.uu.se/en/department/history-of-science-and-ideas/research/research-projects-and-programmes/mapping-the-geographies-of-early-modern-mining-knowledge
   year: 2022
 - end: 2023
+  name: "Jubileumsarkivet: Inledande inventering, digitalisering och analys av G\xF6\
+    teborgs universitetsbiblioteks samling om stadens 300-\xE5rsjubileum 1923"
+  town: "G\xF6teborg"
+  url: https://www.gu.se/forskning/jubileumsarkivet-inledande-inventering-digitalisering-och-analys-av-goteborgs-universitetsbiblioteks-samling-om-stadens-300-arsjubileum-1923
+  year: 2022
+- end: 2023
   name: "Lexikon \xF6ver Nordens medeltida lagspr\xE5k 2.0"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/lexikon-%C3%B6ver-nordens-medeltida-lagspr%C3%A5k-2-0
   year: 2022
 - end: 2023
@@ -156,6 +172,11 @@
     mobility 1690-1750'
   town: Lund
   url: https://portal.research.lu.se/en/projects/the-people-here-are-nosy-the-swedish-diplomats-physical-and-metap
+  year: 2021
+- end: 2025
+  name: 'Beyond ports: Movement and connectivity in the Roman Mediterranean'
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/beyond-ports-movement-and-connectivity-in-the-roman-mediterranean
   year: 2021
 - end: 2025
   name: 'Crafting war memories: Art and Affect in Ukrainian Virtual Museums since
@@ -206,7 +227,7 @@
   year: 2021
 - end: 2022
   name: "F\xF6rfattarens hand: Till handskriftens litteraturhistoria"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/f%C3%B6rfattarens-hand-till-handskriftens-litteraturhistoria
   year: 2021
 - end: 2022
@@ -226,7 +247,7 @@
   year: 2020
 - end: 2024
   name: "Heliga Birgittas texter p\xE5 fornsvenska"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/heliga-birgittas-texter-p%C3%A5-fornsvenska
   year: 2020
 - end: 2024
@@ -294,7 +315,7 @@
   year: 2019
 - end: 2023
   name: Ancient images 2.0. A digital edition of the gotlandic picture stones
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/ancient-images-2-0-a-digital-edition-of-the-gotlandic-picture-stones
   year: 2019
 - end: 2023
@@ -302,6 +323,12 @@
     & Culture, 1945-1989 (WeStAc)
   town: "Ume\xE5"
   url: https://www.umu.se/en/research/projects/welfare-state-analytics.-text-mining-and-modeling-swedish-politics-media--culture-1945-1989-westac-/
+  year: 2019
+- end: 2022
+  name: 'Everyone worked: work patterns and household labor allocation in early modern
+    Sweden'
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/everyone-worked-work-patterns-and-household-labor-allocation-in-e
   year: 2019
 - end: 2022
   name: Financial Independence in a Digital Age
@@ -358,7 +385,7 @@
   year: 2019
 - end: 2026
   name: "60 \xE5r av global utveckling och milj\xF6f\xF6r\xE4ndringar 1939\u20131999"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/60-%C3%A5r-av-global-utveckling-och-milj%C3%B6f%C3%B6r%C3%A4ndringar-1939-1999
   year: 2018
 - end: 2026
@@ -368,7 +395,7 @@
   year: 2018
 - end: 2024
   name: "\"Naturlig spr\xE5kbehandling f\xF6r digital konsthistoria\""
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/naturlig-spr%C3%A5kbehandling-f%C3%B6r-digital-konsthistoria
   year: 2018
 - end: 2024
@@ -464,7 +491,7 @@
   year: 2016
 - end: 2024
   name: Avkodning av historiska chiffer
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/avkodning-av-historiska-chiffer
   year: 2015
 - end: 2023
@@ -560,7 +587,7 @@
   year: 2010
 - end: 2049
   name: "CVA \u2013 Corpus Vasorum Antiquorum"
-  town: "Malm\xF6"
+  town: Stockholm
   url: https://www.su.se/forskning/forskningsprojekt/cva-corpus-vasorum-antiquorum
   year: 2009
 - end: 2015
@@ -578,3 +605,8 @@
   town: Uppsala
   url: https://www.uu.se/en/research/gender-and-work
   year: 2007
+- end: 2004
+  name: "MKB med kulturv\xE4rde"
+  town: "Medelsf\xF6rvaltare"
+  url: https://fou-anslag.raa.se/raa/default.asp?goto=raa.A&eid=Nzk1QjA4MDQxMDc5NUMwODAwMTA3ODQyMDgwMzAwMDkwMDE1Nzg3NDA0MDEwNDAwMDkwRTA5MDY0Rg==
+  year: 2001
