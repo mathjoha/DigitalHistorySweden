@@ -29,10 +29,12 @@ def sort_order(project: dict):
     if project["end"] < project["year"]:
         raise ValueError("Project {project} ends before it starts")
 
-    if ".su.se" in project["url"]:
-        project["town"] = "Stockholm"
-
-    return (-project["year"], -project["end"], project["name"], project["town"])
+    return (
+        -project["year"],
+        -project["end"],
+        project["name"].strip(),
+        project["town"].strip(),
+    )
 
 
 if __name__ == "__main__":
@@ -41,7 +43,7 @@ if __name__ == "__main__":
 
     projects_dicts = yaml.safe_load(raw_yaml)
 
-    names_count = Counter((proj["name"] for proj in projects_dicts))
+    names_count = Counter((proj["name"].strip() for proj in projects_dicts))
 
     duplicate_names = [
         (name, count) for name, count in names_count.items() if count > 1
