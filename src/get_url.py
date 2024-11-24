@@ -35,10 +35,12 @@ def load_urls():
                 first = subprocess.check_output(
                     ["git", "commit", "-am", f'"Add {line}"']
                 )
+                print(first)
                 assert b"failed" in first
                 second = subprocess.check_output(
                     ["git", "commit", "-am", f'"Add {line}"']
                 )
+                print(second)
                 assert b"failed" not in second
 
 
