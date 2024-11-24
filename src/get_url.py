@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 
 from get_gu import gu_parse
 from get_lu import lu_parse
+from get_mau import mau_parse
 from get_oru import oru_parse
 from get_umu import umu_parse
 from get_uu import uu_parse
@@ -30,6 +31,8 @@ if __name__ == "__main__":
             "https://www.oru.se/english/research/research-projects/rp/?rdb="
         ):
             project_data = oru_parse(url)
+        elif url.startswith("https://mau.se/en/research/projects/"):
+            project_data = mau_parse(url)
 
         write_project(project_data)
         saved_response = requests.get("https://web.archive.org/save/" + url)
