@@ -1,3 +1,4 @@
+import subprocess
 from random import shuffle
 from time import sleep
 
@@ -31,11 +32,16 @@ def load_urls():
                 with open(url_file, "w", encoding="utf8") as f:
                     f.writelines(sorted(lines))
                 bar.update(1)
-
-    yield None
+                first = subprocess_check_output(["git", "commit", "-am", f"Add {line}"])
+                assert b"failed" in first
+                second = subprocess_check_output(
+                    ["git", "commit", "-am", f"Add {line}"]
+                )
+                assert b"failed" not in second
 
 
 if __name__ == "__main__":
+    assert b"On branch main" not in subprocess.check_output(["git", "status"])
     for i, url in enumerate(load_urls()):
         if i > 0:
             sleep(10)
