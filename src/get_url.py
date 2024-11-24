@@ -17,7 +17,7 @@ from project_to_yaml import write_project
 
 def load_urls():
     with open(url_file, "r", encoding="utf8") as f:
-        lines = list(set(filter(f.readlines(), lambda line: line != "")))
+        lines = list(set(filter(lambda line: line != "", f.readlines())))
 
     shuffle(lines)
 
