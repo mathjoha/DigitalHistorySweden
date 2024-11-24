@@ -181,6 +181,11 @@
   town: Uppsala
   url: https://swecarcol.ub.uu.se/
   year: 2012
+- end: 2015
+  name: Connecting geographic data to demographic databases
+  town: Lund
+  url: https://portal.research.lu.se/en/projects/connecting-geographic-data-to-demographic-databases
+  year: 2011
 - end: 2012
   name: Encoding and Linking Swedish Censuses (SweCens)
   town: "Ume\xE5"
