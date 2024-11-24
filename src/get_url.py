@@ -32,16 +32,15 @@ def load_urls():
                 with open(url_file, "w", encoding="utf8") as f:
                     f.writelines(sorted(lines))
                 bar.update(1)
-                first = subprocess.check_output(
-                    ["git", "commit", "-am", f'"Add {line}"']
-                )
-                print(first)
-                assert b"failed" in first
-                second = subprocess.check_output(
-                    ["git", "commit", "-am", f'"Add {line}"']
-                )
-                print(second)
-                assert b"failed" not in second
+                try:
+                    first = subprocess.check_output(
+                        ["git", "commit", "-am", f'"Add {line}"']
+                    )
+                finally:
+                    second = subprocess.check_output(
+                        ["git", "commit", "-am", f'"Add {line}"']
+                    )
+                    assert b"failed" not in second
 
 
 if __name__ == "__main__":
