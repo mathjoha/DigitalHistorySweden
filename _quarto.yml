@@ -8,6 +8,7 @@ website:
   navbar:
     left:
       - href: conference.qmd
+      - href: projects.qmd
     right:
       - about.qmd
 

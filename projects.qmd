@@ -1,0 +1,15 @@
+---
+title: Projects
+listing:
+    contents: "projects.yaml"
+    sort: year desc
+    sort-ui: ['year', 'end', 'town', 'name']
+    filter-ui: ['year', 'end', 'town', 'name']
+    fields: ['year', 'end', 'town', 'name']
+    type: table
+    field-display-names:
+        year: Start
+        end: End
+        town: Town
+        name: "Project Name"
+---
