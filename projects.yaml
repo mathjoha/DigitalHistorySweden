@@ -62,6 +62,11 @@
   town: uppsala
   url: https://wasp-hs.org/project/quantifying-culture-a-study-of-ai-and-cultural-heritage-collections/
   year: 2021
+- end: 2025
+  name: The missing link?
+  town: "G\xF6teborg"
+  url: https://www.gu.se/en/research/the-missing-link
+  year: 2021
 - end: 2024
   name: SweTerror
   town: "G\xF6teborg"
@@ -113,6 +118,11 @@
   town: Uppsala
   url: https://de-crypt.org/
   year: 2018
+- end: 2020
+  name: Data base Arable land in Sweden 1810 and 1870
+  town: "G\xF6teborg"
+  url: https://www.gu.se/en/research/data-base-arable-land-in-sweden-1810-and-1870
+  year: 2017
 - end: 2019
   name: Digital Models. Techno-historical collections, digital humanities & narratives
     of industrialisation

@@ -3,6 +3,7 @@ from time import sleep
 
 import requests
 from bs4 import BeautifulSoup as bs
+from tqdm import tqdm
 
 from get_gu import gu_parse
 from get_lu import lu_parse
@@ -21,17 +22,24 @@ def load_urls():
 
     shuffle(lines)
 
-    while len(lines) > 0:
-        line = lines.pop()
-        yield line.strip()
-        with open(url_file, "w", encoding="utf8") as f:
-            f.writelines(sorted(lines))
+    with tqdm(total=len(lines)) as bar:
+        while len(lines) > 0:
+            try:
+                line = lines.pop()
+                yield line.strip()
+            finally:
+                with open(url_file, "w", encoding="utf8") as f:
+                    f.writelines(sorted(lines))
+                bar.update(1)
 
     yield None
 
 
 if __name__ == "__main__":
     for i, url in enumerate(load_urls()):
+        if i > 0:
+            sleep(10)
+
         if "portal.research.lu.se" in url:
             project_data = lu_parse(url)
         elif url.startswith("https://www.umu.se/en/research/projects/"):
@@ -56,5 +64,3 @@ if __name__ == "__main__":
         saved_url = saved_response.url
         assert saved_url.startswith("https://web.archive.org/web/")
         assert saved_url.endswith(url)
-
-        break
