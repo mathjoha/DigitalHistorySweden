@@ -170,8 +170,8 @@
   year: 2021
 - end: 2025
   name: Stadens ansikten. Visuell kultur och social struktur i Stockholm 1880- 1930
-  town: Lund
-  url: https://portal.research.lu.se/en/projects/stadens-ansikten-visuell-kultur-och-social-struktur-i-stockholm-1
+  town: Stockholm
+  url: https://stockholmia.stockholm/forskning/projekt/stadens-ansikten/
   year: 2021
 - end: 2025
   name: The missing link?
@@ -421,6 +421,11 @@
   name: Data base Arable land in Sweden 1810 and 1870
   town: "G\xF6teborg"
   url: https://www.gu.se/en/research/data-base-arable-land-in-sweden-1810-and-1870
+  year: 2017
+- end: 2020
+  name: Digital Atlas of the Roman Empire
+  town: "G\xF6teborg"
+  url: https://imperium.ahlfeldt.se/
   year: 2017
 - end: 2020
   name: 'The Norse perception of the world: A mapping and analysis of foreign place
