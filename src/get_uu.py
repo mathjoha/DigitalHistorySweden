@@ -27,10 +27,6 @@ def uu_parse(url):
 
     start, end, *_ = re.findall(r"\d{4}", overview_div)
 
-    import pdb
-
-    pdb.set_trace()
-
     return {
         "name": title.strip(),
         "year": int(start),

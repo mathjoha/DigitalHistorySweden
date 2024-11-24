@@ -42,7 +42,16 @@ def load_urls():
                 f.writelines(sorted(lines))
             bar.update(1)
             try:
-                first = subprocess.run(["git", "commit", "-am", f'"Format"'])
+                first = subprocess.run(
+                    [
+                        "git",
+                        "add",
+                        projects.absolute(),
+                        projects.absolute(),
+                        "&&",
+                        "pre-commit",
+                    ]
+                )
             finally:
                 second = subprocess.check_output(
                     ["git", "commit", "-am", f'"Add {line}"']
