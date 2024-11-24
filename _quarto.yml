@@ -11,7 +11,23 @@ website:
       - href: projects.qmd
     right:
       - about.qmd
+    pinned: true
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
 
+
+  page-footer:
+    left: "Copyright 2024, Mathias Johansson"
+    right:
+      - icon: github
+        href: https://github.com/
+  repo-url: https://github.com/quarto-dev/quarto-demo
+  repo-actions: [edit, source, issue]
 
 format:
   html:

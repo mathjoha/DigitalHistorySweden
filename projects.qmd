@@ -12,4 +12,5 @@ listing:
         end: End
         town: Town
         name: "Project Name"
+    page-size: 500
 ---
