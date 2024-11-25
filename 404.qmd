@@ -112,8 +112,8 @@ series = d3.stack().order(d3.stackOrderReverse)
     .value(([, D], key) => D.get(key).cnt)
     (d3.index(data, d=> d.year, d => d.label))
 
-width = 928;
-height = 500;
+width = 300;
+height = 900;
 marginTop = 0;
 marginRight = 0;
 marginBottom = 0;
@@ -121,13 +121,13 @@ marginLeft = 0;
 
 yearScale = d3.scaleLinear()
         .domain([2001, 2026])
-        .range([marginLeft, width - marginRight])
+      .rangeRound([height - marginBottom, marginTop]);
 
 countScale = d3.scaleLinear()
       .domain([-40, 40])
-      .rangeRound([height - marginBottom, marginTop]);
+        .range([marginLeft, width - marginRight])
 
-area = d3.area((d,i) => yearScale(years[i]))
-    .y1(d => countScale(d[0]))
-    .y0(d => countScale(d[1]))
+area = d3.area().y((d,i) => yearScale(years[i]))
+    .x1(d => countScale(d[0]))
+    .x0(d => countScale(d[1]))
 ```
