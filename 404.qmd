@@ -91,7 +91,7 @@ function ark(){
         for (let x = alpha ; x <= omega; x++ ){
             let year = start_year[0]
             let row = {
-                label: `y${year}`,
+                label: `Started ${year}`,
                 year: x,
                 cnt: start_year[1].filter(d => d.year <= x & d.end >= x).length
                 }
