@@ -46,6 +46,8 @@ map = {
                 .on('dblclick', reset);
 
 
+  const box = pathGenerator.bounds(geoswe)
+
   const path = svg.append('g').
       selectAll('path')
         .data(geoswe.features)
@@ -79,21 +81,151 @@ map = {
       d3.zoomIdentity,
       d3.zoomTransform(svg.node()).invert([chartWidth / 2, chartHeight / 2]));
 
+  }
+
+   const circles = svg.append('g').selectAll('circle');
+
+
+  const conf_data_w_xy = raw_points;
+
+  function addCoords() {
+    for (let point of conf_data_w_xy){
+      if (point.type == 'conference'){
+        point.fx = projection(point.coordinates)[0];
+        point.fy = projection(point.coordinates)[1];
+      } else {
+        point.x = projection(point.coordinates)[0];
+        point.y = projection(point.coordinates)[1];
+      }
+    }
+  }
+
+  console.log(conf_data_w_xy)
+  addCoords()
+  console.log(conf_data_w_xy)
+
+  // Custom force to put all nodes in a box
+  function boxingForce() {
+    const radius = 5;
+
+    for (let node of conf_data_w_xy) {
+        // Of the positions exceed the box, set them to the boundary position.
+        // You may want to include your nodes width to not overlap with the box.
+
+        if (node.x - radius < box[0][0]) {
+          node.x = box[0][0] + radius
+        } else if (node.x + radius > box[1][0]) {
+          console.log(node  )
+          node.x = box[1][0] - radius
+        }
+
+        if (node.y - radius < box[0][1]) {
+          node.y = box[0][1] + radius
+        } else if (node.y + radius > box[1][1]) {
+          node.y = box[1][1] - radius
+        }
+
+    }
 }
 
- const circles = svg.append('g').selectAll('circle');
+    const sim = d3.forceSimulation(conf_data_w_xy);
+      sim.force('many', d3.forceManyBody().strength(0.25).distanceMax(10))
+        .force("collide", d3.forceCollide().radius(6).strength(0.3))
+        .force("bounds", boxingForce);
 
-  circles
-  .data(conf_data)
-  .join('circle')
-  .attr("cx", d => projection(d.coordinates)[0])
-  .attr("cy", d => projection(d.coordinates)[1])
-  .attr("r", 5)
-    .attr("fill-opacity", 0.9)
-    .attr("fill", 'blue')
-    .attr("stroke", markerColor)
-    .append('title').text((d) => (d.name) );
+    sim.stop();
+    draw();
 
+    console.log(conf_data_w_xy)
+
+
+    const interval = d3.interval(ticked, 500);
+
+    let ticks = 0;
+    const maxTicks = 10000;
+
+    function ticked() {
+        if(ticks < maxTicks) {
+            sim.tick();
+            d3.select("#label").text('Tick: ' + ++ticks + ' of ' + maxTicks);
+            redraw();
+        } else {
+            interval.stop();
+        }
+    }
+
+  function color(point){
+    if(point.type == 'conference'){
+      return 'blue'
+    } else if (point.type == 'project'){
+      return color_town(point.town)
+    }
+  }
+
+  function color_town(name){
+    var result = 'white'
+    switch (name){
+      case "Borås":
+        result = '#4e79a7'
+        break
+      case "Göteborg":
+        result = "#f28e2c"
+        break
+      case "Linköping":
+        result = "#e15759"
+        break
+      case "Malmö":
+        result = "#76b7b2"
+        break
+      case "Umeå":
+        result = "#5900a1"
+        break
+      case "Växjö":
+        result = "#e7298a"
+        break
+      case "Örebro":
+        result = "#d95f02"
+        break
+      case 'Arjeplog':
+        result = "#edc949"
+        break
+      case 'Lund':
+        result = "#af7aa1"
+        break
+      case 'Stockholm':
+        result = "#ff9da7"
+        break
+      case 'Uddevalla':
+        result = "#9c755f"
+        break
+      case 'Uppsala':
+        result = "#bab0ab"
+        break
+    }
+    return result
+  }
+
+  console.log(color_town('Lund'))
+
+
+    function draw() {
+        svg.selectAll("circle")
+                .data(conf_data_w_xy)
+                .join("circle")
+                .attr("r", 5)
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y)
+                .attr("fill", d => color(d))
+                .style('stroke', d => d3.color(color_town(d.town)))
+    }
+
+    function redraw() {
+        svg.selectAll("circle")
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y)
+                .append('title').text((d) => `${d.name} - ${d.y}, ${d.x}`)
+
+    }
 
   car()
   return svg.node();
