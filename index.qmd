@@ -115,7 +115,6 @@ map = {
         if (node.x - radius < box[0][0]) {
           node.x = box[0][0] + radius
         } else if (node.x + radius > box[1][0]) {
-          console.log(node  )
           node.x = box[1][0] - radius
         }
 
@@ -142,7 +141,7 @@ map = {
     const interval = d3.interval(ticked, 500);
 
     let ticks = 0;
-    const maxTicks = 10000;
+    const maxTicks = 1000000;
 
     function ticked() {
         if(ticks < maxTicks) {
@@ -151,6 +150,7 @@ map = {
             redraw();
         } else {
             interval.stop();
+            console.log(maxTicks)
         }
     }
 
@@ -216,7 +216,7 @@ map = {
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
                 .attr("fill", d => color(d))
-                .style('stroke', d => d3.color(color_town(d.town)))
+                .style('stroke', 'black')
     }
 
     function redraw() {
