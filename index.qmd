@@ -106,7 +106,7 @@ map = {
 
   // Custom force to put all nodes in a box
   function boxingForce() {
-    const radius = 5;
+    const radius = 3;
 
     for (let node of conf_data_w_xy) {
         // Of the positions exceed the box, set them to the boundary position.
@@ -129,7 +129,7 @@ map = {
 
     const sim = d3.forceSimulation(conf_data_w_xy);
       sim.force('many', d3.forceManyBody().strength(0.25).distanceMax(10))
-        .force("collide", d3.forceCollide().radius(6).strength(0.3))
+        .force("collide", d3.forceCollide().radius(4).strength(0.3))
         .force("bounds", boxingForce);
 
     sim.stop();
@@ -212,7 +212,7 @@ map = {
         svg.selectAll("circle")
                 .data(conf_data_w_xy)
                 .join("circle")
-                .attr("r", 5)
+                .attr("r", 3)
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
                 .attr("fill", d => color(d))
