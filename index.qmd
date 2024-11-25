@@ -56,28 +56,28 @@ chart = {
 ```{ojs}
 //| echo: false
 
-sorted = raw_points.sort(d => (d.year)).filter(d => d.type != 'conference')
-pre_timeline = Array.from(d3.group(sorted, d=> d.year))
-
 function ark(){
-    let data = []
-    let omega = sorted.map(d => d.year).sort(d => d)[0]
-    let alpha = sorted.map(d => d.end).sort(d => -d)[0]
+  let sorted = raw_points.sort(d => (d.year)).filter(d => d.type != 'conference')
+  let pre_timeline = Array.from(d3.group(sorted, d=> d.year))
 
-    console.log(alpha, omega)
+  let data = []
+  let omega = sorted.map(d => d.year).sort(d => d)[0]
+  let alpha = sorted.map(d => d.end).sort(d => -d)[0]
 
-    for (let start_year of pre_timeline) {
-        for (let x = alpha ; x <= omega; x++ ){
-            let year = start_year[0]
-            let row = {
-                label: `Started ${year}`,
-                year: x,
-                cnt: start_year[1].filter(d => d.year <= x & d.end >= x).length
-                }
-            data.push(row)
-        }
-    }
-    return data
+  console.log(alpha, omega)
+
+  for (let start_year of pre_timeline) {
+    for (let x = alpha ; x <= omega; x++ ){
+      let year = start_year[0]
+      let row = {
+        label: `Started ${year}`,
+        year: x,
+        cnt: start_year[1].filter(d => d.year <= x & d.end >= x).length
+              }
+        data.push(row)
+      }
+  }
+  return data
 }
 
 data = ark()
