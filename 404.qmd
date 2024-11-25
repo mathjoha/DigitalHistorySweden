@@ -87,6 +87,13 @@ keys
 ```
 
 
+```{ojs}
+
+years = Array.from(d3.union(data.map(d => d.year)))
+years
+```
+
+
 
 ```{ojs}
 {
@@ -99,11 +106,8 @@ keys
 
 ```
 
-```{ojs}
-grped = d3.group(data, d=> d.year)
 
 
-```
 
 ```{ojs}
 
@@ -117,46 +121,6 @@ series
 
 
 ```{ojs}
-line = {
-      const svg = d3.create('svg')
-                .attr("title", "line")
-                .attr('width', width)
-                .attr('height', height)
-
-
-
-  svg.append("g")
-    .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(x).ticks(5));
-
-  // Add Y axis
-  const y = d3.scaleLinear()
-    .domain([0, d3.max(data, function(d) { return +d.n; })*1.2])
-    .range([ height, 0 ]);
-  svg.append("g")
-    .call(d3.axisLeft(y));
-
-svg.append("g")
-  .selectAll("g")
-  .data(series)
-  .join("g")
-    .attr("fill", 'green')
-  .selectAll("rect")
-  .data(D => D)
-  .join("rect")
-    .attr("x", d => x(d.data[1].cnt))
-    .attr("y", d => y(d[1]))
-    .attr("height", d => y(d[0]) - y(d[1]))
-    // .attr("width", x.bandwidth());
-
-      return svg.node();
-
-}
-
-```
-
-
-```{ojs}
 width = 928;
 height = 500;
 marginTop = 10;
@@ -164,24 +128,42 @@ marginRight = 10;
 marginBottom = 20;
 marginLeft = 40;
 
-x = d3.scaleBand()
-        .domain(d3.groupSort(data, D => -d3.sum(D, d => d.cnt), d => d.year))
+x = d3.scaleLinear()
+        .domain([2001, 2026])
         .range([marginLeft, width - marginRight])
-        .padding(0.1);
 
 y = d3.scaleLinear()
       .domain([0, d3.max(series, d => d3.max(d, d => d[1]))])
       .rangeRound([height - marginBottom, marginTop]);
+
+area = d3.area((d,i) => x(years[i]))
+    .y0(d => y(d[0]))
+    .y1(d => x(d[1]))
+    .curve(d3.curveMonotoneX)
+
+
 ```
 
 
+
+```{ojs}
+console.log(
+years[0], years[21], years
+)
+```
+
+```{ojs}
+d3.max(series, d => d3.max(d, d => d[1]))
+```
+
+```{ojs}
+x(2020)
+area
+y(1)
+```
+
 ```{ojs}
 chart = {
-    // const color = d3.scaleOrdinal()
-    //     .domain(series.map(d => d.key))
-    //     .range(d3.schemeSpectral[series.length])
-    //     .unknown("#ccc");
-
 
 
   // Create the SVG container.
@@ -195,15 +177,11 @@ chart = {
   svg.append("g")
     .selectAll()
     .data(series)
-    .join("g")
-      .attr("fill", 'red').style('stroke', 'black')
-    .selectAll("rect")
-    .data(D => D.map(d => (d.key = D.key, d)))
-    .join("rect")
-      .attr("x", d => x(d.data[0]))
-      .attr("y", d => y(d[1]))
-      .attr("height", d => y(d[0]) - y(d[1]))
-      .attr("width", x.bandwidth())
+    .enter()
+    .append('path')
+        .style('fill', 'red').style('stroke', 'black')
+        .attr('d', area)
+
 
 
 //   // Append the horizontal axis.
