@@ -101,35 +101,21 @@ function ark(){
     return data
 }
 
-
 data = ark()
 
-
-data
 ```
 
 ```{ojs}
 keys = d3.union(data.map(d => d.label))
-keys
-```
-
-
-```{ojs}
-
 years = Array.from(d3.union(data.map(d => d.year)))
-years
 ```
 
 
-
 ```{ojs}
-
 series = d3.stack().order(d3.stackOrderReverse)
     .keys(keys)
     .value(([, D], key) => D.get(key).cnt)
     (d3.index(data, d=> d.year, d => d.label))
-
-series
 ```
 
 
@@ -146,13 +132,10 @@ x = d3.scaleLinear()
         .range([marginLeft, width - marginRight])
 
 y = d3.scaleLinear()
-      .domain([0, 100])//d3.max(series, d => d3.max(d, d => d[0]))])
+      .domain([0, 100])
       .rangeRound([height - marginBottom, marginTop]);
 
 area = d3.area((d,i) => x(years[i]))
     .y1(d => y(d[0]))
     .y0(d => y(d[1]))
-    // .curve(d3.curveStep)
-
-
 ```
