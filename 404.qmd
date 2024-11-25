@@ -23,14 +23,13 @@ chart = {
     .data(series)
     .enter()
     .append('path')
-        .style('fill', (d,i) => colorScale(i - 1))
-        .style('stroke', 'black')
         .attr('d', area)
+        .style('fill', (d,i) => colorScale(i))
+        .style('stroke', 'black')
 
   return svg.node();
 }
 ```
-
 
 
 ```{ojs}
@@ -71,20 +70,20 @@ yaml.load(projaml).map((d) => ({
 )
 
 gathered_points = raw_points.sort((d) => (d.end, d.name))
-
 ```
 
 ```{ojs}
 //| echo: false
 
-
-sorted = raw_points.sort(d => (d.year))
+sorted = raw_points.sort(d => (d.year)).filter(d => d.year >= 2022 & d.type != 'conference')
 pre_timeline = Array.from(d3.group(sorted, d=> d.year))
+
+pre_timeline
 
 function ark(){
     let data = []
-    let omega = raw_points.map(d => d.year).sort(d => d)[0]
-    let alpha = raw_points.map(d => d.end).sort(d => -d)[0]
+    let omega = sorted.map(d => d.year).sort(d => d)[0]
+    let alpha = sorted.map(d => d.end).sort(d => -d)[0]
 
     console.log(alpha, omega)
 
@@ -126,20 +125,6 @@ years
 
 
 ```{ojs}
-{
-    const series = d3.stack()
-    .keys(d3.union(data.map(d => d.label))) // apples, bananas, cherries, …
-    .value(([, group], key) => group.get(key).cnt)
-  (d3.index(data, d => d.year, d => d.label));
-  return series
-}
-
-```
-
-
-
-
-```{ojs}
 
 series = d3.stack()
     .keys(keys)
@@ -159,17 +144,17 @@ marginBottom = 20;
 marginLeft = 40;
 
 x = d3.scaleLinear()
-        .domain([2001, 2026])
+        .domain([2020, 2026])
         .range([marginLeft, width - marginRight])
 
 y = d3.scaleLinear()
-      .domain([0, d3.max(series, d => d3.max(d, d => d[1]))])
+      .domain([0, 100])//d3.max(series, d => d3.max(d, d => d[0]))])
       .rangeRound([height - marginBottom, marginTop]);
 
 area = d3.area((d,i) => x(years[i]))
-    .y0(d => y(d[0]))
-    .y1(d => x(d[1]))
-    .curve(d3.curveMonotoneX)
+    .y1(d => y(d[0]))
+    .y0(d => x(d[1]))
+    .curve(d3.curveStep)
 
 
 ```
