@@ -34,45 +34,7 @@ chart = {
 ```
 
 
-```{ojs}
-//| echo: false
 
-yaml = require('js-yaml')
-projaml = FileAttachment('./projects.yaml').text()
-confyaml = FileAttachment('./conference.yaml').text()
-
-towns = FileAttachment('towns.json').json()
-
-conf_data = yaml.load(confyaml).map((d) => ({
-  name : d.title,
-  town: d.town,
-  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
-  region : towns.find((t) => (t.name == d.town)).region,
-  type: 'conference',
-  year: d.year,
-  end: d.end,
-  days: d.days
-
-}))
-sorted_c = conf_data.sort(d => d.end)
-
-raw_points = [].concat(
-conf_data,
-yaml.load(projaml).map((d) => ({
-  name : d.name,
-  town: d.town,
-  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
-  region : towns.find((t) => (t.name == d.town)).region,
-  type: 'project',
-  year: d.year,
-  end: d.end,
-  url: d.url
-
-}))
-)
-
-gathered_points = raw_points.sort((d) => (d.end, d.name))
-```
 
 ```{ojs}
 //| echo: false
@@ -112,8 +74,8 @@ series = d3.stack().order(d3.stackOrderReverse)
     .value(([, D], key) => D.get(key).cnt)
     (d3.index(data, d=> d.year, d => d.label))
 
-width = 300;
-height = 900;
+width = 200;
+height = 800;
 marginTop = 0;
 marginRight = 0;
 marginBottom = 0;
@@ -130,4 +92,45 @@ countScale = d3.scaleLinear()
 area = d3.area().y((d,i) => yearScale(years[i]))
     .x1(d => countScale(d[0]))
     .x0(d => countScale(d[1]))
+```
+
+
+```{ojs}
+//| echo: false
+
+yaml = require('js-yaml')
+projaml = FileAttachment('./projects.yaml').text()
+confyaml = FileAttachment('./conference.yaml').text()
+
+towns = FileAttachment('towns.json').json()
+
+conf_data = yaml.load(confyaml).map((d) => ({
+  name : d.title,
+  town: d.town,
+  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
+  region : towns.find((t) => (t.name == d.town)).region,
+  type: 'conference',
+  year: d.year,
+  end: d.end,
+  days: d.days
+
+}))
+sorted_c = conf_data.sort(d => d.end)
+
+raw_points = [].concat(
+conf_data,
+yaml.load(projaml).map((d) => ({
+  name : d.name,
+  town: d.town,
+  coordinates : towns.find((t) => (t.name == d.town)).coordinates,
+  region : towns.find((t) => (t.name == d.town)).region,
+  type: 'project',
+  year: d.year,
+  end: d.end,
+  url: d.url
+
+}))
+)
+
+gathered_points = raw_points.sort((d) => (d.end, d.name))
 ```
