@@ -138,7 +138,7 @@ map = {
     console.log(conf_data_w_xy)
 
 
-    const interval = d3.interval(ticked, 500);
+    const interval = d3.interval(ticked, 50);
 
     let ticks = 0;
     const maxTicks = 1000000;
