@@ -93,9 +93,11 @@ map = {
       if (point.type == 'conference'){
         point.fx = projection(point.coordinates)[0];
         point.fy = projection(point.coordinates)[1];
+        point.title = `${point.name}\n${point.town}`
       } else {
         point.x = projection(point.coordinates)[0];
         point.y = projection(point.coordinates)[1];
+        point.title = `${point.name}\n${point.town}`
       }
     }
   }
@@ -217,13 +219,13 @@ map = {
                 .attr("cy", d => d.y)
                 .attr("fill", d => color(d))
                 .style('stroke', 'black')
+                .append('title').text((d) => d.title)
     }
 
     function redraw() {
         svg.selectAll("circle")
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
-                .append('title').text((d) => `${d.name} - ${d.y}, ${d.x}`)
 
     }
 
