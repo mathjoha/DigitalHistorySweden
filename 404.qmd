@@ -45,29 +45,180 @@ gathered_points = raw_points.sort((d) => (d.end, d.name))
 ```
 
 ```{ojs}
+//| echo: false
+
 
 sorted = raw_points.sort(d => (d.year))
 pre_timeline = Array.from(d3.group(sorted, d=> d.year))
 
 function ark(){
     let data = []
+    let omega = raw_points.map(d => d.year).sort(d => d)[0]
+    let alpha = raw_points.map(d => d.end).sort(d => -d)[0]
+
+    console.log(alpha, omega)
+
     for (let start_year of pre_timeline) {
-        // console.log(start_year)
-        let year = start_year[0]
-        let end = start_year[1].map(d => d.end).sort(d => d)[0]
-        // console.log('from', year, 'to',  end)
-        for (let i = year; i <= end; i++){
+        for (let x = alpha ; x <= omega; x++ ){
+            // console.log(start_year)
+            let year = start_year[0]
+            // console.log('from', year, 'to',  end)
             let row = {
-                label: year,
-                year: i,
-                value: start_year[1].filter(d => d.year <= i & d.end >= i).length
-                   }
+                label: `y${year}`,
+                year: x,
+                cnt: start_year[1].filter(d => d.year <= x & d.end >= x).length
+                }
             data.push(row)
         }
     }
     return data
 }
 
-ark()
 
+data = ark()
+
+
+data
+```
+
+```{ojs}
+keys = d3.union(data.map(d => d.label))
+keys
+```
+
+
+
+```{ojs}
+{
+    const series = d3.stack()
+    .keys(d3.union(data.map(d => d.label))) // apples, bananas, cherries, …
+    .value(([, group], key) => group.get(key).cnt)
+  (d3.index(data, d => d.year, d => d.label));
+  return series
+}
+
+```
+
+```{ojs}
+grped = d3.group(data, d=> d.year)
+
+
+```
+
+```{ojs}
+
+series = d3.stack()
+    .keys(keys)
+    .value(([, D], key) => D.get(key).cnt)
+    (d3.index(data, d=> d.year, d => d.label))
+
+series
+```
+
+
+```{ojs}
+line = {
+      const svg = d3.create('svg')
+                .attr("title", "line")
+                .attr('width', width)
+                .attr('height', height)
+
+
+
+  svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x).ticks(5));
+
+  // Add Y axis
+  const y = d3.scaleLinear()
+    .domain([0, d3.max(data, function(d) { return +d.n; })*1.2])
+    .range([ height, 0 ]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+svg.append("g")
+  .selectAll("g")
+  .data(series)
+  .join("g")
+    .attr("fill", 'green')
+  .selectAll("rect")
+  .data(D => D)
+  .join("rect")
+    .attr("x", d => x(d.data[1].cnt))
+    .attr("y", d => y(d[1]))
+    .attr("height", d => y(d[0]) - y(d[1]))
+    // .attr("width", x.bandwidth());
+
+      return svg.node();
+
+}
+
+```
+
+
+```{ojs}
+width = 928;
+height = 500;
+marginTop = 10;
+marginRight = 10;
+marginBottom = 20;
+marginLeft = 40;
+
+x = d3.scaleBand()
+        .domain(d3.groupSort(data, D => -d3.sum(D, d => d.cnt), d => d.year))
+        .range([marginLeft, width - marginRight])
+        .padding(0.1);
+
+y = d3.scaleLinear()
+      .domain([0, d3.max(series, d => d3.max(d, d => d[1]))])
+      .rangeRound([height - marginBottom, marginTop]);
+```
+
+
+```{ojs}
+chart = {
+    // const color = d3.scaleOrdinal()
+    //     .domain(series.map(d => d.key))
+    //     .range(d3.schemeSpectral[series.length])
+    //     .unknown("#ccc");
+
+
+
+  // Create the SVG container.
+  const svg = d3.create("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [0, 0, width, height])
+      .attr("style", "max-width: 100%; height: auto;");
+
+  // Append a group for each series, and a rect for each element in the series.
+  svg.append("g")
+    .selectAll()
+    .data(series)
+    .join("g")
+      .attr("fill", 'red').style('stroke', 'black')
+    .selectAll("rect")
+    .data(D => D.map(d => (d.key = D.key, d)))
+    .join("rect")
+      .attr("x", d => x(d.data[0]))
+      .attr("y", d => y(d[1]))
+      .attr("height", d => y(d[0]) - y(d[1]))
+      .attr("width", x.bandwidth())
+
+
+//   // Append the horizontal axis.
+//   svg.append("g")
+//       .attr("transform", `translate(0,${height - marginBottom})`)
+//       .call(d3.axisBottom(x).tickSizeOuter(0))
+//       .call(g => g.selectAll(".domain").remove());
+
+//   // Append the vertical axis.
+//   svg.append("g")
+//       .attr("transform", `translate(${marginLeft},0)`)
+//       .call(d3.axisLeft(y).ticks(null, "s"))
+//       .call(g => g.selectAll(".domain").remove());
+
+  // Return the chart with the color scale as a property (for the legend).
+  return svg.node();
+}
 ```
