@@ -47,12 +47,6 @@ map = {
 
 
   const box = pathGenerator.bounds(geoswe)
-  // const box = [
-      // [21, 10],
-      // [330, 665]]
-
-  console.log(box)
-
 
   const path = svg.append('g').
       selectAll('path')
@@ -87,25 +81,28 @@ map = {
       d3.zoomIdentity,
       d3.zoomTransform(svg.node()).invert([chartWidth / 2, chartHeight / 2]));
 
-}
+  }
 
- const circles = svg.append('g').selectAll('circle');
+   const circles = svg.append('g').selectAll('circle');
 
-    const conf_data_w_xy = conf_data.map((d) => ({
-        name: d.name,
-      fx : projection(d.coordinates)[0],
-      fy : projection(d.coordinates)[1]
-    })).concat(raw_points
-    .filter((d) => (d.type == 'project'))
-    .map((d) => ({
-        name: d.name,
-        x : projection(d.coordinates)[0],
-        y : projection(d.coordinates)[1],
-        type: d.type
-    })))
 
-    console.log(conf_data_w_xy)
+  const conf_data_w_xy = raw_points;
 
+  function addCoords() {
+    for (let point of conf_data_w_xy){
+      if (point.type == 'conference'){
+        point.fx = projection(point.coordinates)[0];
+        point.fy = projection(point.coordinates)[1];
+      } else {
+        point.x = projection(point.coordinates)[0];
+        point.y = projection(point.coordinates)[1];
+      }
+    }
+  }
+
+  console.log(conf_data_w_xy)
+  addCoords()
+  console.log(conf_data_w_xy)
 
   // Custom force to put all nodes in a box
   function boxingForce() {
@@ -133,7 +130,7 @@ map = {
 
     const sim = d3.forceSimulation(conf_data_w_xy);
       sim.force('many', d3.forceManyBody().strength(0.25).distanceMax(10))
-        .force("collide", d3.forceCollide().radius(5).strength(0.3))
+        .force("collide", d3.forceCollide().radius(6).strength(0.3))
         .force("bounds", boxingForce);
 
     sim.stop();
@@ -157,14 +154,58 @@ map = {
         }
     }
 
-
   function color(point){
     if(point.type == 'conference'){
       return 'blue'
     } else if (point.type == 'project'){
-      return 'red'
+      return color_town(point.town)
     }
   }
+
+  function color_town(name){
+    var result = 'white'
+    switch (name){
+      case "Borås":
+        result = '#4e79a7'
+        break
+      case "Göteborg":
+        result = "#f28e2c"
+        break
+      case "Linköping":
+        result = "#e15759"
+        break
+      case "Malmö":
+        result = "#76b7b2"
+        break
+      case "Umeå":
+        result = "#5900a1"
+        break
+      case "Växjö":
+        result = "#e7298a"
+        break
+      case "Örebro":
+        result = "#d95f02"
+        break
+      case 'Arjeplog':
+        result = "#edc949"
+        break
+      case 'Lund':
+        result = "#af7aa1"
+        break
+      case 'Stockholm':
+        result = "#ff9da7"
+        break
+      case 'Uddevalla':
+        result = "#9c755f"
+        break
+      case 'Uppsala':
+        result = "#bab0ab"
+        break
+    }
+    return result
+  }
+
+  console.log(color_town('Lund'))
 
 
     function draw() {
@@ -174,7 +215,8 @@ map = {
                 .attr("r", 5)
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
-                .style("fill", d => color(d))
+                .attr("fill", d => color(d))
+                .style('stroke', d => d3.color(color_town(d.town)))
     }
 
     function redraw() {
