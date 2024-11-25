@@ -16,7 +16,7 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href:  https://code.com
+            href:  https://github.com/mathjoha/DigitalHistorySweden
           - text: Report a Bug
             href:  https://bugs.com
 
@@ -26,8 +26,8 @@ website:
     right:
       - icon: github
         href: https://github.com/
-  repo-url: https://github.com/quarto-dev/quarto-demo
-  repo-actions: [edit, source, issue]
+  repo-url: https://github.com/mathjoha/DigitalHistorySweden
+  repo-actions: [issue]
 
 format:
   html:
