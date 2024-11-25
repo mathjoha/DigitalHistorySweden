@@ -32,9 +32,29 @@ def sort_order(project: dict):
     return (
         -project["year"],
         -project["end"],
-        project["name"].strip(),
-        project["town"].strip(),
+        project["name"],
+        project["town"],
     )
+
+
+def format_project(project_dict):
+    result = {
+        "year": project_dict["year"],
+        "end": project_dict["end"],
+        "name": project_dict["name"].strip(),
+        "town": project_dict["town"].strip(),
+        "url": project_dict["url"].strip(),
+    }
+    if "links" not in project_dict:
+        result["links"] = []
+    else:
+        result["links"] = [link.strip() for link in project_dict["links"]]
+
+    result["visit"] = " ".join(
+        f'<a href="{url}">visit</a>' for url in [result["url"]] + result["links"]
+    )
+
+    return result
 
 
 if __name__ == "__main__":
@@ -42,6 +62,8 @@ if __name__ == "__main__":
         raw_yaml = f.read()
 
     projects_dicts = yaml.safe_load(raw_yaml)
+
+    projects_dicts = [format_project(project) for project in projects_dicts]
 
     names_count = Counter((proj["name"].strip() for proj in projects_dicts))
 
