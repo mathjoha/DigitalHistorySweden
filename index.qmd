@@ -56,7 +56,7 @@ chart = {
 ```{ojs}
 //| echo: false
 
-function ark(){
+function ark(raw_points){
   let sorted = raw_points.sort(d => (d.year)).filter(d => d.type != 'conference')
   let pre_timeline = Array.from(d3.group(sorted, d=> d.year))
 
@@ -80,7 +80,7 @@ function ark(){
   return data
 }
 
-data = ark()
+data = ark(raw_points)
 
 keys = d3.union(data.map(d => d.label))
 years = Array.from(d3.union(data.map(d => d.year)))
