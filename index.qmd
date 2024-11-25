@@ -104,11 +104,8 @@ chart = {
 map = {
   const chartWidth = 350;
   const chartHeight = 700;
-  const backgroundColor = "#EAF2FA";
   const landColor = "#09A573";
   const landStroke = "#FCF5E9";
-  const markerColor = "#E26F99";
-
 
   const projection = d3.geoMercator()
                       .translate([chartWidth / 3, chartHeight / 3])
