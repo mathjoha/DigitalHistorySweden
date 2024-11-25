@@ -26,6 +26,7 @@ chart = {
         .attr('d', area)
         .style('fill', (d,i) => colorScale(i))
         .style('stroke', 'black')
+        .append('title').text(d => d.key)
 
   return svg.node();
 }
