@@ -50,6 +50,10 @@ def format_project(project_dict):
     else:
         result["links"] = [link.strip() for link in project_dict["links"]]
 
+    result["visit"] = " ".join(
+        f'<a href="{url}">visit</a>' for url in [result["url"]] + result["links"]
+    )
+
     return result
 
 
