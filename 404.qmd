@@ -124,7 +124,7 @@ years
 
 ```{ojs}
 
-series = d3.stack()
+series = d3.stack().order(d3.stackOrderReverse)
     .keys(keys)
     .value(([, D], key) => D.get(key).cnt)
     (d3.index(data, d=> d.year, d => d.label))
