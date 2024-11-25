@@ -18,16 +18,15 @@ website:
           - text: Source Code
             href:  https://github.com/mathjoha/DigitalHistorySweden
           - text: Report a Bug
-            href:  https://bugs.com
+            href:  https://github.com/mathjoha/DigitalHistorySweden/issues/new
+          - text: Suggest addition
+            href:  https://github.com/mathjoha/DigitalHistorySweden/issues/new
 
 
   page-footer:
     left: "Copyright 2024, Mathias Johansson"
-    right:
-      - icon: github
-        href: https://github.com/
   repo-url: https://github.com/mathjoha/DigitalHistorySweden
-  repo-actions: [issue]
+  # repo-actions: [issue]
 
 format:
   html:
