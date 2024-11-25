@@ -112,10 +112,10 @@ series = d3.stack().order(d3.stackOrderReverse)
 
 width = 928;
 height = 500;
-marginTop = 10;
-marginRight = 10;
-marginBottom = 20;
-marginLeft = 40;
+marginTop = 0;
+marginRight = 0;
+marginBottom = 0;
+marginLeft = 0;
 
 yearScale = d3.scaleLinear()
         .domain([2001, 2026])
