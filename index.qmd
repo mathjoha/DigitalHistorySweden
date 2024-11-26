@@ -25,10 +25,6 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 chart = {
   const width = 100;
   const height = 700;
-  const marginTop = 0;
-  const marginRight = 0;
-  const marginBottom = 0;
-  const marginLeft = 0;
 
   const data = pre_format_timeline(raw_points)
 
@@ -83,16 +79,12 @@ chart = {
   function brushed(e){
     let [low, high] = e.selection
     console.log(yearScale.invert(low), yearScale.invert(high))
+
   }
   return svg.node();
 }
 
 ```
-
-
-
-
-
 
 :::
 
