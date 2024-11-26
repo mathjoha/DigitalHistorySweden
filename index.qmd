@@ -77,8 +77,10 @@ chart = {
     .call(brush.on('brush', brushed))
 
   function brushed(e){
-    let [low, high] = e.selection
-
+    let [high, low] = e.selection
+    low = yearScale.invert(low)
+    high = yearScale.invert(high)
+    draw_circles(new Number(low), new Number(high))
   }
   return svg.node();
 }
@@ -259,13 +261,13 @@ function pre_format_timeline(raw_points){
 //| echo: false
 
 
-  function draw_circles() {
+  function draw_circles(lower, upper) {
 
     const svg = d3.select('.map').select('svg')
 
-    console.log(svg)
+    console.log(lower, upper)
 
-    const conf_data_w_xy = raw_points;
+    const conf_data_w_xy = raw_points.filter((d) => ((d.end >= lower & d.year <= upper) | d.type == 'conference'  ));
 
     function addCoords() {
       for (let point of conf_data_w_xy){
@@ -418,5 +420,5 @@ chartHeight = 700;
  box = pathGenerator.bounds(geoswe)
 
 
-drawn = draw_circles()
+drawn = draw_circles(0,9999)
 ```
