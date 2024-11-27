@@ -25,17 +25,13 @@ geoswe = fetch("https://raw.githubusercontent.com/jnordgren/swedish_data_map_geo
 chart = {
   const width = 100;
   const height = 700;
-  const marginTop = 0;
-  const marginRight = 0;
-  const marginBottom = 0;
-  const marginLeft = 0;
 
   const data = pre_format_timeline(raw_points)
 
   const keys = d3.union(data.map(d => d.label))
   const years = Array.from(d3.union(data.map(d => d.year)))
 
-  const   series = d3.stack().order(d3.stackOrderReverse)
+  const series = d3.stack().order(d3.stackOrderReverse)
   .offset(d3.stackOffsetSilhouette)
       .keys(keys)
       .value(([, D], key) => D.get(key).cnt)
@@ -81,37 +77,26 @@ chart = {
     .call(brush.on('brush', brushed))
 
   function brushed(e){
-    let [low, high] = e.selection
-    console.log(yearScale.invert(low), yearScale.invert(high))
+    let [high, low] = e.selection
+    low = yearScale.invert(low)
+    high = yearScale.invert(high)
+    draw_circles(new Number(low), new Number(high))
   }
   return svg.node();
 }
 
 ```
 
-
-
-
-
-
 :::
 
-::: {.g-col-1}
+::: {.g-col-1 .map .Map}
 
 ```{ojs}
 //| echo: false
 
 map = {
-  const chartWidth = 350;
-  const chartHeight = 700;
   const landColor = "#09A573";
   const landStroke = "#FCF5E9";
-
-  const projection = d3.geoMercator()
-                      .translate([chartWidth / 3, chartHeight / 3])
-                      .fitSize([chartWidth, chartHeight], geoswe);
-
-  const pathGenerator = d3.geoPath(projection);
 
 
   const svg = d3.create('svg')
@@ -121,7 +106,6 @@ map = {
                 .on('dblclick', reset);
 
 
-  const box = pathGenerator.bounds(geoswe)
 
   const path = svg.append('g').
       selectAll('path')
@@ -160,148 +144,6 @@ map = {
    const circles = svg.append('g').selectAll('circle');
 
 
-  const conf_data_w_xy = raw_points;
-
-  function addCoords() {
-    for (let point of conf_data_w_xy){
-      if (point.type == 'conference'){
-        point.fx = projection(point.coordinates)[0];
-        point.fy = projection(point.coordinates)[1];
-        point.title = `${point.name}\n${point.town}`
-      } else {
-        point.x = projection(point.coordinates)[0];
-        point.y = projection(point.coordinates)[1];
-        point.title = `${point.name}\n${point.town}`
-      }
-    }
-  }
-   const radius = 4;
-
-  console.log(conf_data_w_xy)
-  addCoords()
-  console.log(conf_data_w_xy)
-
-  // Custom force to put all nodes in a box
-  function boxingForce() {
-
-    for (let node of conf_data_w_xy) {
-        // Of the positions exceed the box, set them to the boundary position.
-        // You may want to include your nodes width to not overlap with the box.
-
-        if (node.x - radius < box[0][0]) {
-          node.x = box[0][0] + radius
-        } else if (node.x + radius > box[1][0]) {
-          node.x = box[1][0] - radius
-        }
-
-        if (node.y - radius < box[0][1]) {
-          node.y = box[0][1] + radius
-        } else if (node.y + radius > box[1][1]) {
-          node.y = box[1][1] - radius
-        }
-
-    }
-}
-
-    const sim = d3.forceSimulation(conf_data_w_xy);
-      sim.force('many', d3.forceManyBody().strength(0.25).distanceMax(10))
-        .force("collide", d3.forceCollide().radius(radius).strength(0.3))
-        .force("bounds", boxingForce);
-
-    sim.stop();
-    draw();
-
-    console.log(conf_data_w_xy)
-
-
-    const interval = d3.interval(ticked, 50);
-
-    let ticks = 0;
-    const maxTicks = 1000000;
-
-    function ticked() {
-        if(ticks < maxTicks) {
-            sim.tick();
-            d3.select("#label").text('Tick: ' + ++ticks + ' of ' + maxTicks);
-            redraw();
-        } else {
-            interval.stop();
-            console.log(maxTicks)
-        }
-    }
-
-  function color(point){
-    if(point.type == 'conference'){
-      return 'blue'
-    } else if (point.type == 'project'){
-      return color_town(point.town)
-    }
-  }
-
-  function color_town(name){
-    var result = 'white'
-    switch (name){
-      case "Borås":
-        result = '#4e79a7'
-        break
-      case "Göteborg":
-        result = "#f28e2c"
-        break
-      case "Linköping":
-        result = "#e15759"
-        break
-      case "Malmö":
-        result = "#76b7b2"
-        break
-      case "Umeå":
-        result = "#5900a1"
-        break
-      case "Växjö":
-        result = "#e7298a"
-        break
-      case "Örebro":
-        result = "#d95f02"
-        break
-      case 'Arjeplog':
-        result = "#edc949"
-        break
-      case 'Lund':
-        result = "#af7aa1"
-        break
-      case 'Stockholm':
-        result = "#ff9da7"
-        break
-      case 'Uddevalla':
-        result = "#9c755f"
-        break
-      case 'Uppsala':
-        result = "#bab0ab"
-        break
-    }
-    return result
-  }
-
-  console.log(color_town('Lund'))
-
-
-    function draw() {
-        svg.selectAll("circle")
-                .data(conf_data_w_xy)
-                .join("circle")
-                .attr("r", radius-0.5)
-                .attr("cx", d => d.x)
-                .attr("cy", d => d.y)
-                .attr("fill", d => color(d))
-                .style('stroke', 'black')
-                .append('title').text((d) => d.title)
-    }
-
-    function redraw() {
-        svg.selectAll("circle")
-                .attr("cx", d => d.x)
-                .attr("cy", d => d.y)
-
-    }
 
   car()
   return svg.node();
@@ -396,7 +238,6 @@ function pre_format_timeline(raw_points){
   let omega = sorted.map(d => d.year).sort(d => d)[0]
   let alpha = sorted.map(d => d.end).sort(d => -d)[0]
 
-  console.log(alpha, omega)
 
   for (let start_year of pre_timeline) {
     for (let x = alpha ; x <= omega; x++ ){
@@ -413,4 +254,171 @@ function pre_format_timeline(raw_points){
 }
 
 
+```
+
+
+```{ojs}
+//| echo: false
+
+
+  function draw_circles(lower, upper) {
+
+    const svg = d3.select('.map').select('svg')
+
+    console.log(lower, upper)
+
+    const conf_data_w_xy = raw_points.filter((d) => ((d.end >= lower & d.year <= upper) | d.type == 'conference'  ));
+
+    function addCoords() {
+      for (let point of conf_data_w_xy){
+        if (point.type == 'conference'){
+          point.fx = projection(point.coordinates)[0];
+          point.fy = projection(point.coordinates)[1];
+          point.title = `${point.name}\n${point.town}`
+        } else {
+          point.x = projection(point.coordinates)[0];
+          point.y = projection(point.coordinates)[1];
+          point.title = `${point.name}\n${point.town}`
+        }
+      }
+    }
+    const radius = 4;
+
+    addCoords()
+
+    // Custom force to put all nodes in a box
+    function boxingForce() {
+
+      for (let node of conf_data_w_xy) {
+          // Of the positions exceed the box, set them to the boundary position.
+          // You may want to include your nodes width to not overlap with the box.
+
+          if (node.x - radius < box[0][0]) {
+            node.x = box[0][0] + radius
+          } else if (node.x + radius > box[1][0]) {
+            node.x = box[1][0] - radius
+          }
+
+          if (node.y - radius < box[0][1]) {
+            node.y = box[0][1] + radius
+          } else if (node.y + radius > box[1][1]) {
+            node.y = box[1][1] - radius
+          }
+
+      }
+  }
+
+      const sim = d3.forceSimulation(conf_data_w_xy);
+        sim.force('many', d3.forceManyBody().strength(0.25).distanceMax(10))
+          .force("collide", d3.forceCollide().radius(radius).strength(0.3))
+          .force("bounds", boxingForce);
+
+      sim.stop();
+      draw();
+
+      // console.log(conf_data_w_xy)
+
+      const interval = d3.interval(ticked, 50);
+
+      let ticks = 0;
+      const maxTicks = 1000000;
+
+      function ticked() {
+          if(ticks < maxTicks) {
+              sim.tick();
+              d3.select("#label").text('Tick: ' + ++ticks + ' of ' + maxTicks);
+              redraw();
+          } else {
+              interval.stop();
+          }
+      }
+
+    function color(point){
+      if(point.type == 'conference'){
+        return 'blue'
+      } else if (point.type == 'project'){
+        return color_town(point.town)
+      }
+    }
+
+    function color_town(name){
+      var result = 'white'
+      switch (name){
+        case "Borås":
+          result = '#4e79a7'
+          break
+        case "Göteborg":
+          result = "#f28e2c"
+          break
+        case "Linköping":
+          result = "#e15759"
+          break
+        case "Malmö":
+          result = "#76b7b2"
+          break
+        case "Umeå":
+          result = "#5900a1"
+          break
+        case "Växjö":
+          result = "#e7298a"
+          break
+        case "Örebro":
+          result = "#d95f02"
+          break
+        case 'Arjeplog':
+          result = "#edc949"
+          break
+        case 'Lund':
+          result = "#af7aa1"
+          break
+        case 'Stockholm':
+          result = "#ff9da7"
+          break
+        case 'Uddevalla':
+          result = "#9c755f"
+          break
+        case 'Uppsala':
+          result = "#bab0ab"
+          break
+      }
+      return result
+    }
+
+      function draw() {
+          svg.selectAll("circle")
+                  .data(conf_data_w_xy)
+                  .join("circle")
+                  .attr("r", radius-0.5)
+                  .attr("cx", d => d.x)
+                  .attr("cy", d => d.y)
+                  .attr("fill", d => color(d))
+                  .style('stroke', 'black')
+                  .append('title').text((d) => d.title)
+      }
+
+      function redraw() {
+          svg.selectAll("circle")
+                  .attr("cx", d => d.x)
+                  .attr("cy", d => d.y)
+
+      }
+}
+```
+
+```{ojs}
+//| echo: false
+
+chartWidth = 350;
+chartHeight = 700;
+
+
+ projection = d3.geoMercator()
+                      .translate([chartWidth / 3, chartHeight / 3])
+                      .fitSize([chartWidth, chartHeight], geoswe);
+
+ pathGenerator = d3.geoPath(projection);
+ box = pathGenerator.bounds(geoswe)
+
+
+drawn = draw_circles(0,9999)
 ```
