@@ -107,6 +107,7 @@ map = {
 
 
 
+
   const path = svg.append('g').
       selectAll('path')
         .data(geoswe.features)
@@ -143,6 +144,10 @@ map = {
 
    const circles = svg.append('g').selectAll('circle');
 
+
+  const years = svg.append('text').attr('class', 'years')
+
+  years.text(`XXXX-XXXX`).attr('x', box[0][0]).attr('y', box[0][1] + 40)
 
 
   car()
@@ -266,6 +271,12 @@ function pre_format_timeline(raw_points){
     const svg = d3.select('.map').select('svg')
 
     console.log(lower, upper)
+
+    const yrs = svg.selectAll('.years')
+
+    console.log(yrs)
+
+    yrs.text(`${Math.round(lower)}-${Math.round(upper)}`)
 
     const conf_data_w_xy = raw_points.filter((d) => ((d.end >= lower & d.year <= upper) | d.type == 'conference'  ));
 
@@ -420,5 +431,6 @@ chartHeight = 700;
  box = pathGenerator.bounds(geoswe)
 
 
-drawn = draw_circles(0,9999)
+drawn = draw_circles(d3.min(raw_points.map(d => d.year)),d3.max(raw_points.map(d => d.end))
+)
 ```
