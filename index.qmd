@@ -270,6 +270,8 @@ function pre_format_timeline(raw_points){
 
     const svg = d3.select('.map').select('svg')
 
+    svg.selectAll('circle').remove()
+
     console.log(lower, upper)
 
     const yrs = svg.selectAll('.years')
@@ -285,17 +287,17 @@ function pre_format_timeline(raw_points){
         if (point.type == 'conference'){
           point.fx = projection(point.coordinates)[0];
           point.fy = projection(point.coordinates)[1];
-          point.title = `${point.name}\n${point.town}`
         } else {
           point.x = projection(point.coordinates)[0];
           point.y = projection(point.coordinates)[1];
-          point.title = `${point.name}\n${point.town}`
-        }
       }
+    }
     }
     const radius = 4;
 
     addCoords()
+
+    console.log(conf_data_w_xy)
 
     // Custom force to put all nodes in a box
     function boxingForce() {
@@ -332,7 +334,7 @@ function pre_format_timeline(raw_points){
       const interval = d3.interval(ticked, 50);
 
       let ticks = 0;
-      const maxTicks = 1000000;
+      const maxTicks = 1000;
 
       function ticked() {
           if(ticks < maxTicks) {
@@ -404,7 +406,7 @@ function pre_format_timeline(raw_points){
                   .attr("cy", d => d.y)
                   .attr("fill", d => color(d))
                   .style('stroke', 'black')
-                  .append('title').text((d) => d.title)
+                  .append('title').text((d => `${d.name}\n${d.town}`));
       }
 
       function redraw() {
@@ -413,6 +415,8 @@ function pre_format_timeline(raw_points){
                   .attr("cy", d => d.y)
 
       }
+
+
 }
 ```
 
