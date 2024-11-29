@@ -172,16 +172,24 @@ function car (a) {
 
   table.selectAll('div').remove();
 
+  table.style('width', '500 px')
+
+  const table1 = table.append('div')
+  const table2 = table.append('div')
+
   const cardata = a == undefined ? gathered_points : gathered_points.filter((d) => (d.region == a));
 
-  table
-  .style('width', '500 px')
-  .selectAll('div')
+  table1
+    .selectAll('div')
     .data(cardata.filter( (d) => (d.type == "conference")))
     .join('div').html(d => `<h4>${d.name}</h4><h5>${d.town}<span style="float:right;">${d.days} ${d.year}</span></h5>`)
-    .data(cardata)
-    .enter().insert('div')
+
+  table2
+    .selectAll('div')
+    .data(cardata.filter( (d) => (d.type != "conference")))
     .join('div').html(d => `<h4>${d.name} <span style="float:right;"><a href="${d.url}">visit</a></span></h4><h5> ${d.town}<span style="float:right;">${d.year}-${d.end}</span></h5>`)
+
+
 }
 ```
 
