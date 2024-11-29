@@ -2,7 +2,54 @@
 title: "About"
 ---
 
-This is a small curated list of Swedish Digital History projects, conferences
-and activities.
+This is small curated list of Swedish Digital History conferences and projects.
+I created it because I saw a need for a public listing/archiving of the
+conference _Digital History in Sweden_ conference and other Swedish Digital
+History projects.
 
-[suggest project](mailto:hark?subject=DHSWE - Project Suggestion&body=name: NAME%0Durl: URL%0Dyear: START_YEAR%0Dend: END_YEAR (optional)%0DTown: PROJECT_HQ)
+The visualisations and table on the first page are interactive and connected:
+Select a timespan on the vertical, stacked timeline by clicking and dragging to
+select a timespan. Each band represents the projects started in the same year,
+and the width in any given year represents how many of these projects are still
+active. Selecting a portion of the timeline will affect the timespan (shown in
+the upper right corner) used in the visualisation, filtering out which projects
+are shown on the map. It is also possible to select a region of the map, by
+clicking on it, and the list on the right will be filtered to only include
+conferences and projects from that region.
+
+Separate lists for [the conference](/conference.html) with links to the
+conference programmes and a searchable sortable list of
+[the projects](/conference.html) are available on separate pages.
+
+## Inclusion Criteria
+
+There are three criteria for a project to be included in this list:
+
+#### 1. To count as a Digital History project it has to fulfill one of the following
+ - Research using digital methods
+ - Research about digitisation
+ - Digitisation of materials
+ - Mediation of history using digital means
+
+#### 2. Be located in Sweden
+
+The intention behind this mapping is primarily focused on in the geographical
+distribution, i have chosen to map projects to the town where they are located
+rather than the university, institution, museum, etc.
+
+#### 3. Be findable on the internet
+
+Each entry needs to have at least one URL to a reference. Ideally a project
+website or a research portal. All these URLs are archived using
+[archive.org](https://archive.org).
+
+
+## Contributing
+
+I will gladly receive more contributions to the list of projects:
+
+The most expedient way is to [fork](https://github.com/mathjoha/DigitalHistorySweden/fork) the GitHub repository, add some data and make a PullRequest.
+
+Or you can click [here](https://github.com/mathjoha/DigitalHistorySweden/issues/new?assignees=mathjoha&labels=NewAddition&projects=&template=suggest-new-project.md&title=Project+Suggestion%3A+%5B+%5D) to create an issue.
+
+Alternatively you can sen me [an e-mail](mailto:hark?subject=DHSWE - Project Suggestion&body=name: NAME%0Durl: URL%0Dyear: START_YEAR%0Dend: END_YEAR (optional)%0DTown: PROJECT_HQ).

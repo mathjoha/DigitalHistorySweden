@@ -1,10 +1,13 @@
 project:
   type: website
+  output-dir: _site
   preview:
-    port: 7117
+    port: 7112
+
 
 website:
   title: "Digital History in Sweden"
+  site-url: "https://www.digital-history.se"
   navbar:
     left:
       - href: conference.qmd
@@ -18,15 +21,19 @@ website:
           - text: Source Code
             href:  https://github.com/mathjoha/DigitalHistorySweden
           - text: Report a Bug
-            href:  https://github.com/mathjoha/DigitalHistorySweden/issues/new
+            href:  https://github.com/mathjoha/DigitalHistorySweden/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=
           - text: Suggest addition
-            href:  https://github.com/mathjoha/DigitalHistorySweden/issues/new
+            href:  https://github.com/mathjoha/DigitalHistorySweden/issues/new?assignees=mathjoha&labels=NewAddition&projects=&template=suggest-new-project.md&title=Project+Suggestion%3A+%5B+%5D
 
+  announcement:
+    content: |
+      Check out the <b><a href="/about.html">About page</a></b> to get an
+      explanation of what you are looking at.
+    position: below-navbar
 
   page-footer:
     left: "Copyright 2024, Mathias Johansson"
   repo-url: https://github.com/mathjoha/DigitalHistorySweden
-  # repo-actions: [issue]
 
 format:
   html:
