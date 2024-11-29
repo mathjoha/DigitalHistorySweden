@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Malmö",
+        "coordinates": [
+            13.035833,
+            55.605833
+        ],
+        "region": "Skåne"
+    },
+    {
+        "name": "Skövde",
+        "coordinates": [
+            13.85,
+            58.383333
+        ],
+        "region": "Västra Götaland"
+    },
+    {
+        "name": "Linköping",
+        "coordinates": [
+            15.625278,
+            58.415833
+        ],
+        "region": "Östergötland"
+    },
+    {
+        "name": "Karlstad",
+        "coordinates": [
+            13.504167,
+            59.378333
+        ],
+        "region": "Värmland"
+    },
+    {
+        "name": "Lund",
+        "coordinates": [
+            13.195,
+            55.703889
+        ],
+        "region": "Skåne"
+    },
+    {
+        "name": "Umeå",
+        "coordinates": [
+            20.263889,
+            63.825
+        ],
+        "region": "Västerbotten"
+    },
+    {
+        "name": "Uppsala",
+        "coordinates": [
+            17.644722,
+            59.858056
+        ],
+        "region": "Uppsala"
+    },
+    {
+        "name": "Växjö",
+        "coordinates": [
+            14.809167,
+            56.876944
+        ],
+        "region": "Kronoberg"
+    },
+    {
+        "name": "Göteborg",
+        "coordinates": [
+            11.9675,
+            57.7075
+        ],
+        "region": "Västra Götaland"
+    },
+    {
+        "name": "Stockholm",
+        "coordinates": [
+            18.068611,
+            59.329444
+        ],
+        "region": "Stockholm"
+    },
+    {
+        "name": "Örebro",
+        "coordinates": [
+            15.2075,
+            59.273889
+        ],
+        "region": "Örebro"
+    },
+    {
+        "name": "Borås",
+        "coordinates": [
+            12.940278,
+            57.721111
+        ],
+        "region": "Västra Götaland"
+    },
+    {
+        "name": "Arjeplog",
+        "coordinates": [
+            17.883333,
+            66.05
+        ],
+        "region": "Norrbotten"
+    },
+    {
+        "name": "Uddevalla",
+        "coordinates": [
+            11.938056,
+            58.349167
+        ],
+        "region": "Bohuslän"
+    }
+]
