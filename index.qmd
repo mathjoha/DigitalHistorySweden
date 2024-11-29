@@ -105,9 +105,6 @@ map = {
                 .attr('height', chartHeight)
                 .on('dblclick', reset);
 
-
-
-
   const path = svg.append('g').
       selectAll('path')
         .data(geoswe.features)
@@ -148,7 +145,6 @@ map = {
   const years = svg.append('text').attr('class', 'years')
 
   years.text(`XXXX-XXXX`).attr('x', box[0][0]).attr('y', box[0][1] + 40)
-
 
   car()
   return svg.node();
@@ -264,7 +260,6 @@ function pre_format_timeline(raw_points){
 
 ```{ojs}
 //| echo: false
-
 
   function draw_circles(lower, upper) {
 
@@ -426,14 +421,12 @@ function pre_format_timeline(raw_points){
 chartWidth = 350;
 chartHeight = 700;
 
+projection = d3.geoMercator()
+      .translate([chartWidth / 3, chartHeight / 3])
+      .fitSize([chartWidth, chartHeight], geoswe);
 
- projection = d3.geoMercator()
-                      .translate([chartWidth / 3, chartHeight / 3])
-                      .fitSize([chartWidth, chartHeight], geoswe);
-
- pathGenerator = d3.geoPath(projection);
- box = pathGenerator.bounds(geoswe)
-
+pathGenerator = d3.geoPath(projection);
+box = pathGenerator.bounds(geoswe)
 
 drawn = draw_circles(d3.min(raw_points.map(d => d.year)),d3.max(raw_points.map(d => d.end))
 )
