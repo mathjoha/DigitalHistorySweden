@@ -33,6 +33,7 @@ website:
 
   page-footer:
     left: "Copyright 2024, Mathias Johansson"
+    right: v0.0.1
   repo-url: https://github.com/mathjoha/DigitalHistorySweden
 
 format:
