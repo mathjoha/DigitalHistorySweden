@@ -1,9 +1,8 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: docs
   preview:
     port: 7112
-
 
 website:
   title: "Digital History in Sweden"
