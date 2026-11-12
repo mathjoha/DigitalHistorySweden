@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Digital History in Sweden</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -21,8 +27,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +40,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -63,15 +70,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-659650fc26dc25888fc1474f317bb8ac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8d3ad9c781c51ccd60b292c95058b2c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,19 +116,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="custom.scss">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Digital History in Sweden</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -162,6 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </ul>
     </div>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <div id="quarto-announcement" data-announcement-id="5563f085891620dda2aa5905818069c0" class="alert alert-primary hidden"><div class="quarto-announcement-content">
@@ -174,14 +183,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="9" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 8;"><span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>topojson <span class="op">=</span> <span class="pp">require</span>(<span class="st">"topojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="9" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 8;"><span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>topojson <span class="op">=</span> <span class="pp">require</span>(<span class="st">"topojson@3"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -198,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="14" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 13;"><span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>geoswe <span class="op">=</span> <span class="fu">fetch</span>(<span class="st">"https://raw.githubusercontent.com/jnordgren/swedish_data_map_geojson/refs/heads/master/GeoJSON/swedish_provinces.geojson"</span>)<span class="op">.</span><span class="fu">then</span>((response) <span class="kw">=&gt;</span> response<span class="op">.</span><span class="fu">json</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="14" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 13;"><span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>geoswe <span class="op">=</span> <span class="fu">fetch</span>(<span class="st">"https://raw.githubusercontent.com/jnordgren/swedish_data_map_geojson/refs/heads/master/GeoJSON/swedish_provinces.geojson"</span>)<span class="op">.</span><span class="fu">then</span>((response) <span class="kw">=&gt;</span> response<span class="op">.</span><span class="fu">json</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="declaration">
 
@@ -208,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="grid">
 <div class="g-col-1">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="23" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="23" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> {</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> width <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> height <span class="op">=</span> <span class="dv">700</span><span class="op">;</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
@@ -268,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">draw_circles</span>(<span class="kw">new</span> <span class="bu">Number</span>(low)<span class="op">,</span> <span class="kw">new</span> <span class="bu">Number</span>(high))</span>
 <span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> svg<span class="op">.</span><span class="fu">node</span>()<span class="op">;</span></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -278,7 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="g-col-1 map Map">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="94" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 93;"><span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>map <span class="op">=</span> {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="94" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 93;"><span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>map <span class="op">=</span> {</span>
 <span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> landColor <span class="op">=</span> <span class="st">"#09A573"</span><span class="op">;</span></span>
 <span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> landStroke <span class="op">=</span> <span class="st">"#FCF5E9"</span><span class="op">;</span></span>
 <span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a></span>
@@ -327,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">car</span>()</span>
 <span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> svg<span class="op">.</span><span class="fu">node</span>()<span class="op">;</span></span>
-<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="declaration">
 
@@ -340,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="158" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 157;"><span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">car</span> (a) {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="158" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 157;"><span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">car</span> (a) {</span>
 <span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> table <span class="op">=</span> d3<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">'.g-col-3'</span>)<span class="op">;</span></span>
 <span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a></span>
@@ -363,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">data</span>(cardata<span class="op">.</span><span class="fu">filter</span>( (d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">type</span> <span class="op">!=</span> <span class="st">"conference"</span>)))</span>
 <span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">'div'</span>)<span class="op">.</span><span class="fu">html</span>(d <span class="kw">=&gt;</span> <span class="vs">`&lt;h4&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs"> &lt;span style="float:right;"&gt;&lt;a href="</span><span class="sc">${</span>d<span class="op">.</span><span class="at">url</span><span class="sc">}</span><span class="vs">"&gt;visit&lt;/a&gt;&lt;/span&gt;&lt;/h4&gt;&lt;h5&gt; </span><span class="sc">${</span>d<span class="op">.</span><span class="at">town</span><span class="sc">}</span><span class="vs">&lt;span style="float:right;"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">year</span><span class="sc">}</span><span class="vs">-</span><span class="sc">${</span>d<span class="op">.</span><span class="at">end</span><span class="sc">}</span><span class="vs">&lt;/span&gt;&lt;/h5&gt;`</span>)</span>
 <span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="declaration">
 
@@ -371,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="189" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 188;"><span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a>yaml <span class="op">=</span> <span class="pp">require</span>(<span class="st">'js-yaml'</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="189" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 188;"><span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a>yaml <span class="op">=</span> <span class="pp">require</span>(<span class="st">'js-yaml@4'</span>)</span>
 <span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a>projaml <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">'./projects.yaml'</span>)<span class="op">.</span><span class="fu">text</span>()</span>
 <span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a>confyaml <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">'./conference.yaml'</span>)<span class="op">.</span><span class="fu">text</span>()</span>
 <span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a></span>
@@ -404,7 +413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a>}))</span>
 <span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a>gathered_points <span class="op">=</span> raw_points<span class="op">.</span><span class="fu">sort</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">end</span><span class="op">,</span> d<span class="op">.</span><span class="at">name</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a>gathered_points <span class="op">=</span> raw_points<span class="op">.</span><span class="fu">sort</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">end</span><span class="op">,</span> d<span class="op">.</span><span class="at">name</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-6-1" data-nodetype="declaration">
@@ -463,7 +472,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="227" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 226;"><span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">pre_format_timeline</span>(raw_points){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="227" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 226;"><span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">pre_format_timeline</span>(raw_points){</span>
 <span id="cb7-228"><a href="#cb7-228" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sorted <span class="op">=</span> raw_points<span class="op">.</span><span class="fu">sort</span>(d <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">year</span>))<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">!=</span> <span class="st">'conference'</span>)</span>
 <span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> pre_timeline <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(d3<span class="op">.</span><span class="fu">group</span>(sorted<span class="op">,</span> d<span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">year</span>))</span>
 <span id="cb7-230"><a href="#cb7-230" aria-hidden="true" tabindex="-1"></a></span>
@@ -483,7 +492,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-244"><a href="#cb7-244" aria-hidden="true" tabindex="-1"></a>      }</span>
 <span id="cb7-245"><a href="#cb7-245" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb7-246"><a href="#cb7-246" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data</span>
-<span id="cb7-247"><a href="#cb7-247" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-247"><a href="#cb7-247" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="declaration">
 
@@ -491,7 +500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="254" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 253;"><span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw_circles</span>(lower<span class="op">,</span> upper) {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="254" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 253;"><span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw_circles</span>(lower<span class="op">,</span> upper) {</span>
 <span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">'.map'</span>)<span class="op">.</span><span class="fu">select</span>(<span class="st">'svg'</span>)</span>
 <span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a></span>
@@ -639,7 +648,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-399"><a href="#cb8-399" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span>)</span>
 <span id="cb8-400"><a href="#cb8-400" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb8-401"><a href="#cb8-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-402"><a href="#cb8-402" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-402"><a href="#cb8-402" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
@@ -647,7 +656,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="410" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 409;"><span id="cb9-410"><a href="#cb9-410" aria-hidden="true" tabindex="-1"></a>chartWidth <span class="op">=</span> <span class="dv">350</span><span class="op">;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="410" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 409;"><span id="cb9-410"><a href="#cb9-410" aria-hidden="true" tabindex="-1"></a>chartWidth <span class="op">=</span> <span class="dv">350</span><span class="op">;</span></span>
 <span id="cb9-411"><a href="#cb9-411" aria-hidden="true" tabindex="-1"></a>chartHeight <span class="op">=</span> <span class="dv">700</span><span class="op">;</span></span>
 <span id="cb9-412"><a href="#cb9-412" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-413"><a href="#cb9-413" aria-hidden="true" tabindex="-1"></a>projection <span class="op">=</span> d3<span class="op">.</span><span class="fu">geoMercator</span>()</span>
@@ -660,7 +669,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-420"><a href="#cb9-420" aria-hidden="true" tabindex="-1"></a>drawn <span class="op">=</span> <span class="fu">draw_circles</span>(</span>
 <span id="cb9-421"><a href="#cb9-421" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">min</span>(raw_points<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">year</span>))<span class="op">,</span></span>
 <span id="cb9-422"><a href="#cb9-422" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">max</span>(raw_points<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">end</span>))</span>
-<span id="cb9-423"><a href="#cb9-423" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-423"><a href="#cb9-423" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-9-1" data-nodetype="declaration">
@@ -709,7 +718,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuZDMgPSByZXF1aXJlKFwiZDNcIilcbnRvcG9qc29uID0gcmVxdWlyZShcInRvcG9qc29uXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmdlb3N3ZSA9IGZldGNoKFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2pub3JkZ3Jlbi9zd2VkaXNoX2RhdGFfbWFwX2dlb2pzb24vcmVmcy9oZWFkcy9tYXN0ZXIvR2VvSlNPTi9zd2VkaXNoX3Byb3ZpbmNlcy5nZW9qc29uXCIpLnRoZW4oKHJlc3BvbnNlKSA9PiByZXNwb25zZS5qc29uKCkpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmNoYXJ0ID0ge1xuICBjb25zdCB3aWR0aCA9IDEwMDtcbiAgY29uc3QgaGVpZ2h0ID0gNzAwO1xuXG4gIGNvbnN0IGRhdGEgPSBwcmVfZm9ybWF0X3RpbWVsaW5lKHJhd19wb2ludHMpXG5cbiAgY29uc3Qga2V5cyA9IGQzLnVuaW9uKGRhdGEubWFwKGQgPT4gZC5sYWJlbCkpXG4gIGNvbnN0IHllYXJzID0gQXJyYXkuZnJvbShkMy51bmlvbihkYXRhLm1hcChkID0+IGQueWVhcikpKVxuXG4gIGNvbnN0IHNlcmllcyA9IGQzLnN0YWNrKCkub3JkZXIoZDMuc3RhY2tPcmRlclJldmVyc2UpXG4gICAgLm9mZnNldChkMy5zdGFja09mZnNldFNpbGhvdWV0dGUpXG4gICAgLmtleXMoa2V5cylcbiAgICAudmFsdWUoKFssIERdLCBrZXkpID0+IEQuZ2V0KGtleSkuY250KVxuICAgICAgKGQzLmluZGV4KGRhdGEsIGQ9PiBkLnllYXIsIGQgPT4gZC5sYWJlbCkpXG5cbiAgY29uc3QgeWVhclNjYWxlID0gZDMuc2NhbGVMaW5lYXIoKVxuICAgIC5kb21haW4oWzIwMDEsIDIwMjRdKVxuICAgIC5yYW5nZVJvdW5kKFtoZWlnaHQsIDBdKTtcblxuICBjb25zdCBjb3VudFNjYWxlID0gZDMuc2NhbGVMaW5lYXIoKVxuICAgICAgICAuZG9tYWluKFstNDAsIDQwXSlcbiAgICAgICAgICAucmFuZ2UoWzAsIHdpZHRoXSlcblxuICBjb25zdCBhcmVhID0gZDMuYXJlYSgpLnkoKGQsaSkgPT4geWVhclNjYWxlKHllYXJzW2ldKSlcbiAgICAgIC54MShkID0+IGNvdW50U2NhbGUoZFswXSkpXG4gICAgICAueDAoZCA9PiBjb3VudFNjYWxlKGRbMV0pKVxuXG4gICAgY29uc3QgY29sb3JTY2FsZSA9IGQzLnNjYWxlT3JkaW5hbChkMy5zY2hlbWVTcGVjdHJhbFsxMV0pXG4gICAgICAgIC5kb21haW4oWzAsIGtleXMubGVuZ3RoXSlcblxuLy8gQ3JlYXRlIHRoZSBTVkcgY29udGFpbmVyLlxuICBjb25zdCBzdmcgPSBkMy5jcmVhdGUoXCJzdmdcIilcbiAgICAgIC5hdHRyKCd0aXRsZScsICdUaW1lbGluZScpXG4gICAgICAuYXR0cihcIndpZHRoXCIsIHdpZHRoKVxuICAgICAgLmF0dHIoXCJoZWlnaHRcIiwgaGVpZ2h0KVxuICAgICAgLmF0dHIoXCJ2aWV3Qm94XCIsIFswLCAwLCB3aWR0aCwgaGVpZ2h0XSlcblxuICAvLyBBcHBlbmQgYSBncm91cCBmb3IgZWFjaCBzZXJpZXMsIGFuZCBhIHJlY3QgZm9yIGVhY2ggZWxlbWVudCBpbiB0aGUgc2VyaWVzLlxuICBzdmcuYXBwZW5kKFwiZ1wiKVxuICAgIC5zZWxlY3RBbGwoKVxuICAgIC5kYXRhKHNlcmllcylcbiAgICAuZW50ZXIoKVxuICAgIC5hcHBlbmQoJ3BhdGgnKVxuICAgICAgICAuYXR0cignZCcsIGFyZWEpXG4gICAgICAgIC5zdHlsZSgnZmlsbCcsIChkLGkpID0+IGNvbG9yU2NhbGUoaSkpXG4gICAgICAgIC5zdHlsZSgnc3Ryb2tlJywgJ2JsYWNrJylcbiAgICAgICAgLmFwcGVuZCgndGl0bGUnKS50ZXh0KGQgPT4gZC5rZXkpXG5cbiAgY29uc3QgYnJ1c2ggPSBkMy5icnVzaFkoKVxuICBzdmcuYXBwZW5kKCdnJylcbiAgICAuYXR0cignY2xhc3MnLCAnYnJ1c2gnKVxuICAgIC5jYWxsKGJydXNoLm9uKCdicnVzaCcsIGJydXNoZWQpKVxuXG4gIGZ1bmN0aW9uIGJydXNoZWQoZSl7XG4gICAgbGV0IFtoaWdoLCBsb3ddID0gZS5zZWxlY3Rpb25cbiAgICBsb3cgPSB5ZWFyU2NhbGUuaW52ZXJ0KGxvdylcbiAgICBoaWdoID0geWVhclNjYWxlLmludmVydChoaWdoKVxuICAgIGRyYXdfY2lyY2xlcyhuZXcgTnVtYmVyKGxvdyksIG5ldyBOdW1iZXIoaGlnaCkpXG4gIH1cbiAgcmV0dXJuIHN2Zy5ub2RlKCk7XG59XG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxubWFwID0ge1xuICBjb25zdCBsYW5kQ29sb3IgPSBcIiMwOUE1NzNcIjtcbiAgY29uc3QgbGFuZFN0cm9rZSA9IFwiI0ZDRjVFOVwiO1xuXG4gIGNvbnN0IHN2ZyA9IGQzLmNyZWF0ZSgnc3ZnJylcbiAgICAuYXR0cihcInRpdGxlXCIsIFwiTWFwXCIpXG4gICAgLmF0dHIoJ3dpZHRoJywgY2hhcnRXaWR0aClcbiAgICAuYXR0cignaGVpZ2h0JywgY2hhcnRIZWlnaHQpXG4gICAgLm9uKCdkYmxjbGljaycsIHJlc2V0KTtcblxuICBjb25zdCBwYXRoID0gc3ZnLmFwcGVuZCgnZycpLlxuICAgICAgc2VsZWN0QWxsKCdwYXRoJylcbiAgICAgICAgLmRhdGEoZ2Vvc3dlLmZlYXR1cmVzKVxuICAgICAgICAuam9pbigncGF0aCcpXG4gICAgICAgIC5hdHRyKCdkJywgcGF0aEdlbmVyYXRvcilcbiAgICAgICAgLmF0dHIoJ2ZpbGwnLCBsYW5kQ29sb3IpXG4gICAgICAgIC5hdHRyKCdzdHJva2UnLCBsYW5kU3Ryb2tlKVxuICAgICAgICAuYXR0cignc3Ryb2tlLXdpZHRoJywgMSk7XG5cbiAgcGF0aC5zdHlsZSgnY3Vyc29yJywgJ3BvaW50ZXInKS5vbignY2xpY2snLCBjbGlja2VkKTtcblxuICBwYXRoLmFwcGVuZCgndGl0bGUnKS50ZXh0KChkKSA9PiBkLnByb3BlcnRpZXMubmFtZSk7XG5cbiAgZnVuY3Rpb24gY2xpY2tlZCAoZXZlbnQsIHApe1xuXG4gICAgY29uc3QgdCA9IHN2Zy50cmFuc2l0aW9uKCkuZHVyYXRpb24oNzUwKVxuICAgIHBhdGgudHJhbnNpdGlvbigpLnN0eWxlKCdmaWxsJywgZDMuY29sb3IoJ2dyYXknKSk7XG5cbiAgICBkMy5zZWxlY3QodGhpcykudHJhbnNpdGlvbigpLnN0eWxlKCdmaWxsJywgJ3JlZCcpO1xuICAgIGNhcihwLnByb3BlcnRpZXMubmFtZSlcbiAgfVxuXG4gIGZ1bmN0aW9uIHJlc2V0KCkge1xuICAgIGNhcigpXG5cbiAgICBwYXRoLnRyYW5zaXRpb24oKS5zdHlsZShcImZpbGxcIiwgbnVsbCk7XG4gICAgc3ZnLnRyYW5zaXRpb24oKS5kdXJhdGlvbig3NTApLmNhbGwoXG4gICAgICBkMy56b29tSWRlbnRpdHksXG4gICAgICBkMy56b29tVHJhbnNmb3JtKHN2Zy5ub2RlKCkpLmludmVydChbY2hhcnRXaWR0aCAvIDIsIGNoYXJ0SGVpZ2h0IC8gMl0pKTtcbiAgfVxuXG4gIGNvbnN0IGNpcmNsZXMgPSBzdmcuYXBwZW5kKCdnJykuc2VsZWN0QWxsKCdjaXJjbGUnKTtcblxuICBjb25zdCB5ZWFycyA9IHN2Zy5hcHBlbmQoJ3RleHQnKS5hdHRyKCdjbGFzcycsICd5ZWFycycpXG5cbiAgeWVhcnMudGV4dChgWFhYWC1YWFhYYCkuYXR0cigneCcsIGJveFswXVswXSkuYXR0cigneScsIGJveFswXVsxXSArIDQwKVxuXG4gIGNhcigpXG4gIHJldHVybiBzdmcubm9kZSgpO1xufVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmZ1bmN0aW9uIGNhciAoYSkge1xuXG4gIGNvbnN0IHRhYmxlID0gZDMuc2VsZWN0QWxsKCcuZy1jb2wtMycpO1xuXG4gIHRhYmxlLnNlbGVjdEFsbCgnZGl2JykucmVtb3ZlKCk7XG5cbiAgdGFibGUuc3R5bGUoJ3dpZHRoJywgJzUwMCBweCcpXG5cbiAgY29uc3QgdGFibGUxID0gdGFibGUuYXBwZW5kKCdkaXYnKVxuICBjb25zdCB0YWJsZTIgPSB0YWJsZS5hcHBlbmQoJ2RpdicpXG5cbiAgY29uc3QgY2FyZGF0YSA9IGEgPT0gdW5kZWZpbmVkID8gZ2F0aGVyZWRfcG9pbnRzIDogZ2F0aGVyZWRfcG9pbnRzLmZpbHRlcigoZCkgPT4gKGQucmVnaW9uID09IGEpKTtcblxuICB0YWJsZTFcbiAgICAuc2VsZWN0QWxsKCdkaXYnKVxuICAgIC5kYXRhKGNhcmRhdGEuZmlsdGVyKCAoZCkgPT4gKGQudHlwZSA9PSBcImNvbmZlcmVuY2VcIikpKVxuICAgIC5qb2luKCdkaXYnKS5odG1sKGQgPT4gYDxoND4ke2QubmFtZX08L2g0PjxoNT4ke2QudG93bn08c3BhbiBzdHlsZT1cImZsb2F0OnJpZ2h0O1wiPiR7ZC5kYXlzfSAke2QueWVhcn08L3NwYW4+PC9oNT5gKVxuXG4gIHRhYmxlMlxuICAgIC5zZWxlY3RBbGwoJ2RpdicpXG4gICAgLmRhdGEoY2FyZGF0YS5maWx0ZXIoIChkKSA9PiAoZC50eXBlICE9IFwiY29uZmVyZW5jZVwiKSkpXG4gICAgLmpvaW4oJ2RpdicpLmh0bWwoZCA9PiBgPGg0PiR7ZC5uYW1lfSA8c3BhbiBzdHlsZT1cImZsb2F0OnJpZ2h0O1wiPjxhIGhyZWY9XCIke2QudXJsfVwiPnZpc2l0PC9hPjwvc3Bhbj48L2g0PjxoNT4gJHtkLnRvd259PHNwYW4gc3R5bGU9XCJmbG9hdDpyaWdodDtcIj4ke2QueWVhcn0tJHtkLmVuZH08L3NwYW4+PC9oNT5gKVxuXG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbnlhbWwgPSByZXF1aXJlKCdqcy15YW1sJylcbnByb2phbWwgPSBGaWxlQXR0YWNobWVudCgnLi9wcm9qZWN0cy55YW1sJykudGV4dCgpXG5jb25meWFtbCA9IEZpbGVBdHRhY2htZW50KCcuL2NvbmZlcmVuY2UueWFtbCcpLnRleHQoKVxuXG50b3ducyA9IEZpbGVBdHRhY2htZW50KCd0b3ducy5qc29uJykuanNvbigpXG5cbmNvbmZfZGF0YSA9IHlhbWwubG9hZChjb25meWFtbCkubWFwKChkKSA9PiAoe1xuICBuYW1lIDogZC50aXRsZSxcbiAgdG93bjogZC50b3duLFxuICBjb29yZGluYXRlcyA6IHRvd25zLmZpbmQoKHQpID0+ICh0Lm5hbWUgPT0gZC50b3duKSkuY29vcmRpbmF0ZXMsXG4gIHJlZ2lvbiA6IHRvd25zLmZpbmQoKHQpID0+ICh0Lm5hbWUgPT0gZC50b3duKSkucmVnaW9uLFxuICB0eXBlOiAnY29uZmVyZW5jZScsXG4gIHllYXI6IGQueWVhcixcbiAgZW5kOiBkLmVuZCxcbiAgZGF5czogZC5kYXlzXG59KSlcbnNvcnRlZF9jID0gY29uZl9kYXRhLnNvcnQoZCA9PiBkLmVuZClcblxucmF3X3BvaW50cyA9IFtdLmNvbmNhdChcbmNvbmZfZGF0YSxcbnlhbWwubG9hZChwcm9qYW1sKS5tYXAoKGQpID0+ICh7XG4gIG5hbWUgOiBkLm5hbWUsXG4gIHRvd246IGQudG93bixcbiAgY29vcmRpbmF0ZXMgOiB0b3ducy5maW5kKCh0KSA9PiAodC5uYW1lID09IGQudG93bikpLmNvb3JkaW5hdGVzLFxuICByZWdpb24gOiB0b3ducy5maW5kKCh0KSA9PiAodC5uYW1lID09IGQudG93bikpLnJlZ2lvbixcbiAgdHlwZTogJ3Byb2plY3QnLFxuICB5ZWFyOiBkLnllYXIsXG4gIGVuZDogZC5lbmQsXG4gIHVybDogZC51cmxcblxufSkpXG4pXG5cbmdhdGhlcmVkX3BvaW50cyA9IHJhd19wb2ludHMuc29ydCgoZCkgPT4gKGQuZW5kLCBkLm5hbWUpKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmZ1bmN0aW9uIHByZV9mb3JtYXRfdGltZWxpbmUocmF3X3BvaW50cyl7XG4gIGxldCBzb3J0ZWQgPSByYXdfcG9pbnRzLnNvcnQoZCA9PiAoZC55ZWFyKSkuZmlsdGVyKGQgPT4gZC50eXBlICE9ICdjb25mZXJlbmNlJylcbiAgbGV0IHByZV90aW1lbGluZSA9IEFycmF5LmZyb20oZDMuZ3JvdXAoc29ydGVkLCBkPT4gZC55ZWFyKSlcblxuICBsZXQgZGF0YSA9IFtdXG4gIGxldCBvbWVnYSA9IHNvcnRlZC5tYXAoZCA9PiBkLnllYXIpLnNvcnQoZCA9PiBkKVswXVxuICBsZXQgYWxwaGEgPSBzb3J0ZWQubWFwKGQgPT4gZC5lbmQpLnNvcnQoZCA9PiAtZClbMF1cblxuICBmb3IgKGxldCBzdGFydF95ZWFyIG9mIHByZV90aW1lbGluZSkge1xuICAgIGZvciAobGV0IHggPSBhbHBoYSA7IHggPD0gb21lZ2E7IHgrKyApe1xuICAgICAgbGV0IHllYXIgPSBzdGFydF95ZWFyWzBdXG4gICAgICBsZXQgcm93ID0ge1xuICAgICAgICBsYWJlbDogYFN0YXJ0ZWQgJHt5ZWFyfWAsXG4gICAgICAgIHllYXI6IHgsXG4gICAgICAgIGNudDogc3RhcnRfeWVhclsxXS5maWx0ZXIoZCA9PiBkLnllYXIgPD0geCAmIGQuZW5kID49IHgpLmxlbmd0aFxuICAgICAgICAgICAgICB9XG4gICAgICAgIGRhdGEucHVzaChyb3cpXG4gICAgICB9XG4gIH1cbiAgcmV0dXJuIGRhdGFcbn1cblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5mdW5jdGlvbiBkcmF3X2NpcmNsZXMobG93ZXIsIHVwcGVyKSB7XG5cbiAgY29uc3Qgc3ZnID0gZDMuc2VsZWN0KCcubWFwJykuc2VsZWN0KCdzdmcnKVxuXG4gIHN2Zy5zZWxlY3RBbGwoJ2NpcmNsZScpLnJlbW92ZSgpXG5cbiAgY29uc29sZS5sb2cobG93ZXIsIHVwcGVyKVxuXG4gIGNvbnN0IHlycyA9IHN2Zy5zZWxlY3RBbGwoJy55ZWFycycpXG5cbiAgY29uc29sZS5sb2coeXJzKVxuXG4gIHlycy50ZXh0KGAke01hdGgucm91bmQobG93ZXIpfS0ke01hdGgucm91bmQodXBwZXIpfWApXG5cbiAgY29uc3QgY29uZl9kYXRhX3dfeHkgPSByYXdfcG9pbnRzLmZpbHRlcigoZCkgPT4gKChkLmVuZCA+PSBsb3dlciAmIGQueWVhciA8PSB1cHBlcikgfCBkLnR5cGUgPT0gJ2NvbmZlcmVuY2UnICApKTtcblxuICBmdW5jdGlvbiBhZGRDb29yZHMoKSB7XG4gICAgZm9yIChsZXQgcG9pbnQgb2YgY29uZl9kYXRhX3dfeHkpe1xuICAgICAgaWYgKHBvaW50LnR5cGUgPT0gJ2NvbmZlcmVuY2UnKXtcbiAgICAgICAgcG9pbnQuZnggPSBwcm9qZWN0aW9uKHBvaW50LmNvb3JkaW5hdGVzKVswXTtcbiAgICAgICAgcG9pbnQuZnkgPSBwcm9qZWN0aW9uKHBvaW50LmNvb3JkaW5hdGVzKVsxXTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIHBvaW50LnggPSBwcm9qZWN0aW9uKHBvaW50LmNvb3JkaW5hdGVzKVswXTtcbiAgICAgICAgcG9pbnQueSA9IHByb2plY3Rpb24ocG9pbnQuY29vcmRpbmF0ZXMpWzFdO1xuICAgIH1cbiAgfVxuICB9XG4gIGNvbnN0IHJhZGl1cyA9IDQ7XG5cbiAgYWRkQ29vcmRzKClcblxuICBjb25zb2xlLmxvZyhjb25mX2RhdGFfd194eSlcblxuICAvLyBDdXN0b20gZm9yY2UgdG8gcHV0IGFsbCBub2RlcyBpbiBhIGJveFxuICBmdW5jdGlvbiBib3hpbmdGb3JjZSgpIHtcblxuICAgIGZvciAobGV0IG5vZGUgb2YgY29uZl9kYXRhX3dfeHkpIHtcbiAgICAgIC8vIE9mIHRoZSBwb3NpdGlvbnMgZXhjZWVkIHRoZSBib3gsIHNldCB0aGVtIHRvIHRoZSBib3VuZGFyeSBwb3NpdGlvbi5cbiAgICAgIC8vIFlvdSBtYXkgd2FudCB0byBpbmNsdWRlIHlvdXIgbm9kZXMgd2lkdGggdG8gbm90IG92ZXJsYXAgd2l0aCB0aGUgYm94LlxuXG4gICAgICBpZiAobm9kZS54IC0gcmFkaXVzIDwgYm94WzBdWzBdKSB7XG4gICAgICAgIG5vZGUueCA9IGJveFswXVswXSArIHJhZGl1c1xuICAgICAgfSBlbHNlIGlmIChub2RlLnggKyByYWRpdXMgPiBib3hbMV1bMF0pIHtcbiAgICAgICAgbm9kZS54ID0gYm94WzFdWzBdIC0gcmFkaXVzXG4gICAgICB9XG5cbiAgICAgIGlmIChub2RlLnkgLSByYWRpdXMgPCBib3hbMF1bMV0pIHtcbiAgICAgICAgbm9kZS55ID0gYm94WzBdWzFdICsgcmFkaXVzXG4gICAgICB9IGVsc2UgaWYgKG5vZGUueSArIHJhZGl1cyA+IGJveFsxXVsxXSkge1xuICAgICAgICBub2RlLnkgPSBib3hbMV1bMV0gLSByYWRpdXNcbiAgICAgIH1cbiAgfVxufVxuXG4gIGNvbnN0IHNpbSA9IGQzLmZvcmNlU2ltdWxhdGlvbihjb25mX2RhdGFfd194eSk7XG4gICAgc2ltLmZvcmNlKCdtYW55JywgZDMuZm9yY2VNYW55Qm9keSgpLnN0cmVuZ3RoKDAuMjUpLmRpc3RhbmNlTWF4KDEwKSlcbiAgICAgIC5mb3JjZShcImNvbGxpZGVcIiwgZDMuZm9yY2VDb2xsaWRlKCkucmFkaXVzKHJhZGl1cykuc3RyZW5ndGgoMC4zKSlcbiAgICAgIC5mb3JjZShcImJvdW5kc1wiLCBib3hpbmdGb3JjZSk7XG5cbiAgc2ltLnN0b3AoKTtcbiAgZHJhdygpO1xuXG4gIC8vIGNvbnNvbGUubG9nKGNvbmZfZGF0YV93X3h5KVxuXG4gIGNvbnN0IGludGVydmFsID0gZDMuaW50ZXJ2YWwodGlja2VkLCA1MCk7XG5cbiAgbGV0IHRpY2tzID0gMDtcbiAgY29uc3QgbWF4VGlja3MgPSAxMDAwO1xuXG4gIGZ1bmN0aW9uIHRpY2tlZCgpIHtcbiAgICBpZih0aWNrcyA8IG1heFRpY2tzKSB7XG4gICAgICBzaW0udGljaygpO1xuICAgICAgZDMuc2VsZWN0KFwiI2xhYmVsXCIpLnRleHQoJ1RpY2s6ICcgKyArK3RpY2tzICsgJyBvZiAnICsgbWF4VGlja3MpO1xuICAgICAgcmVkcmF3KCk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGludGVydmFsLnN0b3AoKTtcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBjb2xvcihwb2ludCl7XG4gICAgaWYocG9pbnQudHlwZSA9PSAnY29uZmVyZW5jZScpe1xuICAgICAgcmV0dXJuICdibHVlJ1xuICAgIH0gZWxzZSBpZiAocG9pbnQudHlwZSA9PSAncHJvamVjdCcpe1xuICAgICAgcmV0dXJuIGNvbG9yX3Rvd24ocG9pbnQudG93bilcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBjb2xvcl90b3duKG5hbWUpe1xuICAgIHZhciByZXN1bHQgPSAnd2hpdGUnXG4gICAgc3dpdGNoIChuYW1lKXtcbiAgICAgIGNhc2UgXCJCb3LDpXNcIjpcbiAgICAgICAgcmVzdWx0ID0gJyM0ZTc5YTcnXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIFwiR8O2dGVib3JnXCI6XG4gICAgICAgIHJlc3VsdCA9IFwiI2YyOGUyY1wiXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIFwiTGlua8O2cGluZ1wiOlxuICAgICAgICByZXN1bHQgPSBcIiNlMTU3NTlcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSBcIk1hbG3DtlwiOlxuICAgICAgICByZXN1bHQgPSBcIiM3NmI3YjJcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSBcIlVtZcOlXCI6XG4gICAgICAgIHJlc3VsdCA9IFwiIzU5MDBhMVwiXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIFwiVsOkeGrDtlwiOlxuICAgICAgICByZXN1bHQgPSBcIiNlNzI5OGFcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSBcIsOWcmVicm9cIjpcbiAgICAgICAgcmVzdWx0ID0gXCIjZDk1ZjAyXCJcbiAgICAgICAgYnJlYWtcbiAgICAgIGNhc2UgJ0FyamVwbG9nJzpcbiAgICAgICAgcmVzdWx0ID0gXCIjZWRjOTQ5XCJcbiAgICAgICAgYnJlYWtcbiAgICAgIGNhc2UgJ0x1bmQnOlxuICAgICAgICByZXN1bHQgPSBcIiNhZjdhYTFcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSAnU3RvY2tob2xtJzpcbiAgICAgICAgcmVzdWx0ID0gXCIjZmY5ZGE3XCJcbiAgICAgICAgYnJlYWtcbiAgICAgIGNhc2UgJ1VkZGV2YWxsYSc6XG4gICAgICAgIHJlc3VsdCA9IFwiIzljNzU1ZlwiXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlICdVcHBzYWxhJzpcbiAgICAgICAgcmVzdWx0ID0gXCIjYmFiMGFiXCJcbiAgICAgICAgYnJlYWtcbiAgICB9XG4gICAgcmV0dXJuIHJlc3VsdFxuICB9XG5cbiAgZnVuY3Rpb24gZHJhdygpIHtcbiAgICBzdmcuc2VsZWN0QWxsKFwiY2lyY2xlXCIpXG4gICAgLmRhdGEoY29uZl9kYXRhX3dfeHkpXG4gICAgLmpvaW4oXCJjaXJjbGVcIilcbiAgICAuYXR0cihcInJcIiwgcmFkaXVzLTAuNSlcbiAgICAuYXR0cihcImN4XCIsIGQgPT4gZC54KVxuICAgIC5hdHRyKFwiY3lcIiwgZCA9PiBkLnkpXG4gICAgLmF0dHIoXCJmaWxsXCIsIGQgPT4gY29sb3IoZCkpXG4gICAgLnN0eWxlKCdzdHJva2UnLCAnYmxhY2snKVxuICAgIC5hcHBlbmQoJ3RpdGxlJykudGV4dCgoZCA9PiBgJHtkLm5hbWV9XFxuJHtkLnRvd259YCkpO1xuICAgIH1cblxuICAgIGZ1bmN0aW9uIHJlZHJhdygpIHtcbiAgICAgIHN2Zy5zZWxlY3RBbGwoXCJjaXJjbGVcIilcbiAgICAgICAgLmF0dHIoXCJjeFwiLCBkID0+IGQueClcbiAgICAgICAgLmF0dHIoXCJjeVwiLCBkID0+IGQueSlcbiAgICB9XG5cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuY2hhcnRXaWR0aCA9IDM1MDtcbmNoYXJ0SGVpZ2h0ID0gNzAwO1xuXG5wcm9qZWN0aW9uID0gZDMuZ2VvTWVyY2F0b3IoKVxuICAgICAgLnRyYW5zbGF0ZShbY2hhcnRXaWR0aCAvIDMsIGNoYXJ0SGVpZ2h0IC8gM10pXG4gICAgICAuZml0U2l6ZShbY2hhcnRXaWR0aCwgY2hhcnRIZWlnaHRdLCBnZW9zd2UpO1xuXG5wYXRoR2VuZXJhdG9yID0gZDMuZ2VvUGF0aChwcm9qZWN0aW9uKTtcbmJveCA9IHBhdGhHZW5lcmF0b3IuYm91bmRzKGdlb3N3ZSlcblxuZHJhd24gPSBkcmF3X2NpcmNsZXMoXG4gIGQzLm1pbihyYXdfcG9pbnRzLm1hcChkID0+IGQueWVhcikpLFxuICBkMy5tYXgocmF3X3BvaW50cy5tYXAoZCA9PiBkLmVuZCkpXG4pXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuZDMgPSByZXF1aXJlKFwiZDNAN1wiKVxudG9wb2pzb24gPSByZXF1aXJlKFwidG9wb2pzb25AM1wiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5nZW9zd2UgPSBmZXRjaChcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qbm9yZGdyZW4vc3dlZGlzaF9kYXRhX21hcF9nZW9qc29uL3JlZnMvaGVhZHMvbWFzdGVyL0dlb0pTT04vc3dlZGlzaF9wcm92aW5jZXMuZ2VvanNvblwiKS50aGVuKChyZXNwb25zZSkgPT4gcmVzcG9uc2UuanNvbigpKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5jaGFydCA9IHtcbiAgY29uc3Qgd2lkdGggPSAxMDA7XG4gIGNvbnN0IGhlaWdodCA9IDcwMDtcblxuICBjb25zdCBkYXRhID0gcHJlX2Zvcm1hdF90aW1lbGluZShyYXdfcG9pbnRzKVxuXG4gIGNvbnN0IGtleXMgPSBkMy51bmlvbihkYXRhLm1hcChkID0+IGQubGFiZWwpKVxuICBjb25zdCB5ZWFycyA9IEFycmF5LmZyb20oZDMudW5pb24oZGF0YS5tYXAoZCA9PiBkLnllYXIpKSlcblxuICBjb25zdCBzZXJpZXMgPSBkMy5zdGFjaygpLm9yZGVyKGQzLnN0YWNrT3JkZXJSZXZlcnNlKVxuICAgIC5vZmZzZXQoZDMuc3RhY2tPZmZzZXRTaWxob3VldHRlKVxuICAgIC5rZXlzKGtleXMpXG4gICAgLnZhbHVlKChbLCBEXSwga2V5KSA9PiBELmdldChrZXkpLmNudClcbiAgICAgIChkMy5pbmRleChkYXRhLCBkPT4gZC55ZWFyLCBkID0+IGQubGFiZWwpKVxuXG4gIGNvbnN0IHllYXJTY2FsZSA9IGQzLnNjYWxlTGluZWFyKClcbiAgICAuZG9tYWluKFsyMDAxLCAyMDI0XSlcbiAgICAucmFuZ2VSb3VuZChbaGVpZ2h0LCAwXSk7XG5cbiAgY29uc3QgY291bnRTY2FsZSA9IGQzLnNjYWxlTGluZWFyKClcbiAgICAgICAgLmRvbWFpbihbLTQwLCA0MF0pXG4gICAgICAgICAgLnJhbmdlKFswLCB3aWR0aF0pXG5cbiAgY29uc3QgYXJlYSA9IGQzLmFyZWEoKS55KChkLGkpID0+IHllYXJTY2FsZSh5ZWFyc1tpXSkpXG4gICAgICAueDEoZCA9PiBjb3VudFNjYWxlKGRbMF0pKVxuICAgICAgLngwKGQgPT4gY291bnRTY2FsZShkWzFdKSlcblxuICAgIGNvbnN0IGNvbG9yU2NhbGUgPSBkMy5zY2FsZU9yZGluYWwoZDMuc2NoZW1lU3BlY3RyYWxbMTFdKVxuICAgICAgICAuZG9tYWluKFswLCBrZXlzLmxlbmd0aF0pXG5cbi8vIENyZWF0ZSB0aGUgU1ZHIGNvbnRhaW5lci5cbiAgY29uc3Qgc3ZnID0gZDMuY3JlYXRlKFwic3ZnXCIpXG4gICAgICAuYXR0cigndGl0bGUnLCAnVGltZWxpbmUnKVxuICAgICAgLmF0dHIoXCJ3aWR0aFwiLCB3aWR0aClcbiAgICAgIC5hdHRyKFwiaGVpZ2h0XCIsIGhlaWdodClcbiAgICAgIC5hdHRyKFwidmlld0JveFwiLCBbMCwgMCwgd2lkdGgsIGhlaWdodF0pXG5cbiAgLy8gQXBwZW5kIGEgZ3JvdXAgZm9yIGVhY2ggc2VyaWVzLCBhbmQgYSByZWN0IGZvciBlYWNoIGVsZW1lbnQgaW4gdGhlIHNlcmllcy5cbiAgc3ZnLmFwcGVuZChcImdcIilcbiAgICAuc2VsZWN0QWxsKClcbiAgICAuZGF0YShzZXJpZXMpXG4gICAgLmVudGVyKClcbiAgICAuYXBwZW5kKCdwYXRoJylcbiAgICAgICAgLmF0dHIoJ2QnLCBhcmVhKVxuICAgICAgICAuc3R5bGUoJ2ZpbGwnLCAoZCxpKSA9PiBjb2xvclNjYWxlKGkpKVxuICAgICAgICAuc3R5bGUoJ3N0cm9rZScsICdibGFjaycpXG4gICAgICAgIC5hcHBlbmQoJ3RpdGxlJykudGV4dChkID0+IGQua2V5KVxuXG4gIGNvbnN0IGJydXNoID0gZDMuYnJ1c2hZKClcbiAgc3ZnLmFwcGVuZCgnZycpXG4gICAgLmF0dHIoJ2NsYXNzJywgJ2JydXNoJylcbiAgICAuY2FsbChicnVzaC5vbignYnJ1c2gnLCBicnVzaGVkKSlcblxuICBmdW5jdGlvbiBicnVzaGVkKGUpe1xuICAgIGxldCBbaGlnaCwgbG93XSA9IGUuc2VsZWN0aW9uXG4gICAgbG93ID0geWVhclNjYWxlLmludmVydChsb3cpXG4gICAgaGlnaCA9IHllYXJTY2FsZS5pbnZlcnQoaGlnaClcbiAgICBkcmF3X2NpcmNsZXMobmV3IE51bWJlcihsb3cpLCBuZXcgTnVtYmVyKGhpZ2gpKVxuICB9XG4gIHJldHVybiBzdmcubm9kZSgpO1xufVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbm1hcCA9IHtcbiAgY29uc3QgbGFuZENvbG9yID0gXCIjMDlBNTczXCI7XG4gIGNvbnN0IGxhbmRTdHJva2UgPSBcIiNGQ0Y1RTlcIjtcblxuICBjb25zdCBzdmcgPSBkMy5jcmVhdGUoJ3N2ZycpXG4gICAgLmF0dHIoXCJ0aXRsZVwiLCBcIk1hcFwiKVxuICAgIC5hdHRyKCd3aWR0aCcsIGNoYXJ0V2lkdGgpXG4gICAgLmF0dHIoJ2hlaWdodCcsIGNoYXJ0SGVpZ2h0KVxuICAgIC5vbignZGJsY2xpY2snLCByZXNldCk7XG5cbiAgY29uc3QgcGF0aCA9IHN2Zy5hcHBlbmQoJ2cnKS5cbiAgICAgIHNlbGVjdEFsbCgncGF0aCcpXG4gICAgICAgIC5kYXRhKGdlb3N3ZS5mZWF0dXJlcylcbiAgICAgICAgLmpvaW4oJ3BhdGgnKVxuICAgICAgICAuYXR0cignZCcsIHBhdGhHZW5lcmF0b3IpXG4gICAgICAgIC5hdHRyKCdmaWxsJywgbGFuZENvbG9yKVxuICAgICAgICAuYXR0cignc3Ryb2tlJywgbGFuZFN0cm9rZSlcbiAgICAgICAgLmF0dHIoJ3N0cm9rZS13aWR0aCcsIDEpO1xuXG4gIHBhdGguc3R5bGUoJ2N1cnNvcicsICdwb2ludGVyJykub24oJ2NsaWNrJywgY2xpY2tlZCk7XG5cbiAgcGF0aC5hcHBlbmQoJ3RpdGxlJykudGV4dCgoZCkgPT4gZC5wcm9wZXJ0aWVzLm5hbWUpO1xuXG4gIGZ1bmN0aW9uIGNsaWNrZWQgKGV2ZW50LCBwKXtcblxuICAgIGNvbnN0IHQgPSBzdmcudHJhbnNpdGlvbigpLmR1cmF0aW9uKDc1MClcbiAgICBwYXRoLnRyYW5zaXRpb24oKS5zdHlsZSgnZmlsbCcsIGQzLmNvbG9yKCdncmF5JykpO1xuXG4gICAgZDMuc2VsZWN0KHRoaXMpLnRyYW5zaXRpb24oKS5zdHlsZSgnZmlsbCcsICdyZWQnKTtcbiAgICBjYXIocC5wcm9wZXJ0aWVzLm5hbWUpXG4gIH1cblxuICBmdW5jdGlvbiByZXNldCgpIHtcbiAgICBjYXIoKVxuXG4gICAgcGF0aC50cmFuc2l0aW9uKCkuc3R5bGUoXCJmaWxsXCIsIG51bGwpO1xuICAgIHN2Zy50cmFuc2l0aW9uKCkuZHVyYXRpb24oNzUwKS5jYWxsKFxuICAgICAgZDMuem9vbUlkZW50aXR5LFxuICAgICAgZDMuem9vbVRyYW5zZm9ybShzdmcubm9kZSgpKS5pbnZlcnQoW2NoYXJ0V2lkdGggLyAyLCBjaGFydEhlaWdodCAvIDJdKSk7XG4gIH1cblxuICBjb25zdCBjaXJjbGVzID0gc3ZnLmFwcGVuZCgnZycpLnNlbGVjdEFsbCgnY2lyY2xlJyk7XG5cbiAgY29uc3QgeWVhcnMgPSBzdmcuYXBwZW5kKCd0ZXh0JykuYXR0cignY2xhc3MnLCAneWVhcnMnKVxuXG4gIHllYXJzLnRleHQoYFhYWFgtWFhYWGApLmF0dHIoJ3gnLCBib3hbMF1bMF0pLmF0dHIoJ3knLCBib3hbMF1bMV0gKyA0MClcblxuICBjYXIoKVxuICByZXR1cm4gc3ZnLm5vZGUoKTtcbn1cblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5mdW5jdGlvbiBjYXIgKGEpIHtcblxuICBjb25zdCB0YWJsZSA9IGQzLnNlbGVjdEFsbCgnLmctY29sLTMnKTtcblxuICB0YWJsZS5zZWxlY3RBbGwoJ2RpdicpLnJlbW92ZSgpO1xuXG4gIHRhYmxlLnN0eWxlKCd3aWR0aCcsICc1MDAgcHgnKVxuXG4gIGNvbnN0IHRhYmxlMSA9IHRhYmxlLmFwcGVuZCgnZGl2JylcbiAgY29uc3QgdGFibGUyID0gdGFibGUuYXBwZW5kKCdkaXYnKVxuXG4gIGNvbnN0IGNhcmRhdGEgPSBhID09IHVuZGVmaW5lZCA/IGdhdGhlcmVkX3BvaW50cyA6IGdhdGhlcmVkX3BvaW50cy5maWx0ZXIoKGQpID0+IChkLnJlZ2lvbiA9PSBhKSk7XG5cbiAgdGFibGUxXG4gICAgLnNlbGVjdEFsbCgnZGl2JylcbiAgICAuZGF0YShjYXJkYXRhLmZpbHRlciggKGQpID0+IChkLnR5cGUgPT0gXCJjb25mZXJlbmNlXCIpKSlcbiAgICAuam9pbignZGl2JykuaHRtbChkID0+IGA8aDQ+JHtkLm5hbWV9PC9oND48aDU+JHtkLnRvd259PHNwYW4gc3R5bGU9XCJmbG9hdDpyaWdodDtcIj4ke2QuZGF5c30gJHtkLnllYXJ9PC9zcGFuPjwvaDU+YClcblxuICB0YWJsZTJcbiAgICAuc2VsZWN0QWxsKCdkaXYnKVxuICAgIC5kYXRhKGNhcmRhdGEuZmlsdGVyKCAoZCkgPT4gKGQudHlwZSAhPSBcImNvbmZlcmVuY2VcIikpKVxuICAgIC5qb2luKCdkaXYnKS5odG1sKGQgPT4gYDxoND4ke2QubmFtZX0gPHNwYW4gc3R5bGU9XCJmbG9hdDpyaWdodDtcIj48YSBocmVmPVwiJHtkLnVybH1cIj52aXNpdDwvYT48L3NwYW4+PC9oND48aDU+ICR7ZC50b3dufTxzcGFuIHN0eWxlPVwiZmxvYXQ6cmlnaHQ7XCI+JHtkLnllYXJ9LSR7ZC5lbmR9PC9zcGFuPjwvaDU+YClcblxufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG55YW1sID0gcmVxdWlyZSgnanMteWFtbEA0JylcbnByb2phbWwgPSBGaWxlQXR0YWNobWVudCgnLi9wcm9qZWN0cy55YW1sJykudGV4dCgpXG5jb25meWFtbCA9IEZpbGVBdHRhY2htZW50KCcuL2NvbmZlcmVuY2UueWFtbCcpLnRleHQoKVxuXG50b3ducyA9IEZpbGVBdHRhY2htZW50KCd0b3ducy5qc29uJykuanNvbigpXG5cbmNvbmZfZGF0YSA9IHlhbWwubG9hZChjb25meWFtbCkubWFwKChkKSA9PiAoe1xuICBuYW1lIDogZC50aXRsZSxcbiAgdG93bjogZC50b3duLFxuICBjb29yZGluYXRlcyA6IHRvd25zLmZpbmQoKHQpID0+ICh0Lm5hbWUgPT0gZC50b3duKSkuY29vcmRpbmF0ZXMsXG4gIHJlZ2lvbiA6IHRvd25zLmZpbmQoKHQpID0+ICh0Lm5hbWUgPT0gZC50b3duKSkucmVnaW9uLFxuICB0eXBlOiAnY29uZmVyZW5jZScsXG4gIHllYXI6IGQueWVhcixcbiAgZW5kOiBkLmVuZCxcbiAgZGF5czogZC5kYXlzXG59KSlcbnNvcnRlZF9jID0gY29uZl9kYXRhLnNvcnQoZCA9PiBkLmVuZClcblxucmF3X3BvaW50cyA9IFtdLmNvbmNhdChcbmNvbmZfZGF0YSxcbnlhbWwubG9hZChwcm9qYW1sKS5tYXAoKGQpID0+ICh7XG4gIG5hbWUgOiBkLm5hbWUsXG4gIHRvd246IGQudG93bixcbiAgY29vcmRpbmF0ZXMgOiB0b3ducy5maW5kKCh0KSA9PiAodC5uYW1lID09IGQudG93bikpLmNvb3JkaW5hdGVzLFxuICByZWdpb24gOiB0b3ducy5maW5kKCh0KSA9PiAodC5uYW1lID09IGQudG93bikpLnJlZ2lvbixcbiAgdHlwZTogJ3Byb2plY3QnLFxuICB5ZWFyOiBkLnllYXIsXG4gIGVuZDogZC5lbmQsXG4gIHVybDogZC51cmxcblxufSkpXG4pXG5cbmdhdGhlcmVkX3BvaW50cyA9IHJhd19wb2ludHMuc29ydCgoZCkgPT4gKGQuZW5kLCBkLm5hbWUpKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmZ1bmN0aW9uIHByZV9mb3JtYXRfdGltZWxpbmUocmF3X3BvaW50cyl7XG4gIGxldCBzb3J0ZWQgPSByYXdfcG9pbnRzLnNvcnQoZCA9PiAoZC55ZWFyKSkuZmlsdGVyKGQgPT4gZC50eXBlICE9ICdjb25mZXJlbmNlJylcbiAgbGV0IHByZV90aW1lbGluZSA9IEFycmF5LmZyb20oZDMuZ3JvdXAoc29ydGVkLCBkPT4gZC55ZWFyKSlcblxuICBsZXQgZGF0YSA9IFtdXG4gIGxldCBvbWVnYSA9IHNvcnRlZC5tYXAoZCA9PiBkLnllYXIpLnNvcnQoZCA9PiBkKVswXVxuICBsZXQgYWxwaGEgPSBzb3J0ZWQubWFwKGQgPT4gZC5lbmQpLnNvcnQoZCA9PiAtZClbMF1cblxuICBmb3IgKGxldCBzdGFydF95ZWFyIG9mIHByZV90aW1lbGluZSkge1xuICAgIGZvciAobGV0IHggPSBhbHBoYSA7IHggPD0gb21lZ2E7IHgrKyApe1xuICAgICAgbGV0IHllYXIgPSBzdGFydF95ZWFyWzBdXG4gICAgICBsZXQgcm93ID0ge1xuICAgICAgICBsYWJlbDogYFN0YXJ0ZWQgJHt5ZWFyfWAsXG4gICAgICAgIHllYXI6IHgsXG4gICAgICAgIGNudDogc3RhcnRfeWVhclsxXS5maWx0ZXIoZCA9PiBkLnllYXIgPD0geCAmIGQuZW5kID49IHgpLmxlbmd0aFxuICAgICAgICAgICAgICB9XG4gICAgICAgIGRhdGEucHVzaChyb3cpXG4gICAgICB9XG4gIH1cbiAgcmV0dXJuIGRhdGFcbn1cblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5mdW5jdGlvbiBkcmF3X2NpcmNsZXMobG93ZXIsIHVwcGVyKSB7XG5cbiAgY29uc3Qgc3ZnID0gZDMuc2VsZWN0KCcubWFwJykuc2VsZWN0KCdzdmcnKVxuXG4gIHN2Zy5zZWxlY3RBbGwoJ2NpcmNsZScpLnJlbW92ZSgpXG5cbiAgY29uc29sZS5sb2cobG93ZXIsIHVwcGVyKVxuXG4gIGNvbnN0IHlycyA9IHN2Zy5zZWxlY3RBbGwoJy55ZWFycycpXG5cbiAgY29uc29sZS5sb2coeXJzKVxuXG4gIHlycy50ZXh0KGAke01hdGgucm91bmQobG93ZXIpfS0ke01hdGgucm91bmQodXBwZXIpfWApXG5cbiAgY29uc3QgY29uZl9kYXRhX3dfeHkgPSByYXdfcG9pbnRzLmZpbHRlcigoZCkgPT4gKChkLmVuZCA+PSBsb3dlciAmIGQueWVhciA8PSB1cHBlcikgfCBkLnR5cGUgPT0gJ2NvbmZlcmVuY2UnICApKTtcblxuICBmdW5jdGlvbiBhZGRDb29yZHMoKSB7XG4gICAgZm9yIChsZXQgcG9pbnQgb2YgY29uZl9kYXRhX3dfeHkpe1xuICAgICAgaWYgKHBvaW50LnR5cGUgPT0gJ2NvbmZlcmVuY2UnKXtcbiAgICAgICAgcG9pbnQuZnggPSBwcm9qZWN0aW9uKHBvaW50LmNvb3JkaW5hdGVzKVswXTtcbiAgICAgICAgcG9pbnQuZnkgPSBwcm9qZWN0aW9uKHBvaW50LmNvb3JkaW5hdGVzKVsxXTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIHBvaW50LnggPSBwcm9qZWN0aW9uKHBvaW50LmNvb3JkaW5hdGVzKVswXTtcbiAgICAgICAgcG9pbnQueSA9IHByb2plY3Rpb24ocG9pbnQuY29vcmRpbmF0ZXMpWzFdO1xuICAgIH1cbiAgfVxuICB9XG4gIGNvbnN0IHJhZGl1cyA9IDQ7XG5cbiAgYWRkQ29vcmRzKClcblxuICBjb25zb2xlLmxvZyhjb25mX2RhdGFfd194eSlcblxuICAvLyBDdXN0b20gZm9yY2UgdG8gcHV0IGFsbCBub2RlcyBpbiBhIGJveFxuICBmdW5jdGlvbiBib3hpbmdGb3JjZSgpIHtcblxuICAgIGZvciAobGV0IG5vZGUgb2YgY29uZl9kYXRhX3dfeHkpIHtcbiAgICAgIC8vIE9mIHRoZSBwb3NpdGlvbnMgZXhjZWVkIHRoZSBib3gsIHNldCB0aGVtIHRvIHRoZSBib3VuZGFyeSBwb3NpdGlvbi5cbiAgICAgIC8vIFlvdSBtYXkgd2FudCB0byBpbmNsdWRlIHlvdXIgbm9kZXMgd2lkdGggdG8gbm90IG92ZXJsYXAgd2l0aCB0aGUgYm94LlxuXG4gICAgICBpZiAobm9kZS54IC0gcmFkaXVzIDwgYm94WzBdWzBdKSB7XG4gICAgICAgIG5vZGUueCA9IGJveFswXVswXSArIHJhZGl1c1xuICAgICAgfSBlbHNlIGlmIChub2RlLnggKyByYWRpdXMgPiBib3hbMV1bMF0pIHtcbiAgICAgICAgbm9kZS54ID0gYm94WzFdWzBdIC0gcmFkaXVzXG4gICAgICB9XG5cbiAgICAgIGlmIChub2RlLnkgLSByYWRpdXMgPCBib3hbMF1bMV0pIHtcbiAgICAgICAgbm9kZS55ID0gYm94WzBdWzFdICsgcmFkaXVzXG4gICAgICB9IGVsc2UgaWYgKG5vZGUueSArIHJhZGl1cyA+IGJveFsxXVsxXSkge1xuICAgICAgICBub2RlLnkgPSBib3hbMV1bMV0gLSByYWRpdXNcbiAgICAgIH1cbiAgfVxufVxuXG4gIGNvbnN0IHNpbSA9IGQzLmZvcmNlU2ltdWxhdGlvbihjb25mX2RhdGFfd194eSk7XG4gICAgc2ltLmZvcmNlKCdtYW55JywgZDMuZm9yY2VNYW55Qm9keSgpLnN0cmVuZ3RoKDAuMjUpLmRpc3RhbmNlTWF4KDEwKSlcbiAgICAgIC5mb3JjZShcImNvbGxpZGVcIiwgZDMuZm9yY2VDb2xsaWRlKCkucmFkaXVzKHJhZGl1cykuc3RyZW5ndGgoMC4zKSlcbiAgICAgIC5mb3JjZShcImJvdW5kc1wiLCBib3hpbmdGb3JjZSk7XG5cbiAgc2ltLnN0b3AoKTtcbiAgZHJhdygpO1xuXG4gIC8vIGNvbnNvbGUubG9nKGNvbmZfZGF0YV93X3h5KVxuXG4gIGNvbnN0IGludGVydmFsID0gZDMuaW50ZXJ2YWwodGlja2VkLCA1MCk7XG5cbiAgbGV0IHRpY2tzID0gMDtcbiAgY29uc3QgbWF4VGlja3MgPSAxMDAwO1xuXG4gIGZ1bmN0aW9uIHRpY2tlZCgpIHtcbiAgICBpZih0aWNrcyA8IG1heFRpY2tzKSB7XG4gICAgICBzaW0udGljaygpO1xuICAgICAgZDMuc2VsZWN0KFwiI2xhYmVsXCIpLnRleHQoJ1RpY2s6ICcgKyArK3RpY2tzICsgJyBvZiAnICsgbWF4VGlja3MpO1xuICAgICAgcmVkcmF3KCk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGludGVydmFsLnN0b3AoKTtcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBjb2xvcihwb2ludCl7XG4gICAgaWYocG9pbnQudHlwZSA9PSAnY29uZmVyZW5jZScpe1xuICAgICAgcmV0dXJuICdibHVlJ1xuICAgIH0gZWxzZSBpZiAocG9pbnQudHlwZSA9PSAncHJvamVjdCcpe1xuICAgICAgcmV0dXJuIGNvbG9yX3Rvd24ocG9pbnQudG93bilcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBjb2xvcl90b3duKG5hbWUpe1xuICAgIHZhciByZXN1bHQgPSAnd2hpdGUnXG4gICAgc3dpdGNoIChuYW1lKXtcbiAgICAgIGNhc2UgXCJCb3LDpXNcIjpcbiAgICAgICAgcmVzdWx0ID0gJyM0ZTc5YTcnXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIFwiR8O2dGVib3JnXCI6XG4gICAgICAgIHJlc3VsdCA9IFwiI2YyOGUyY1wiXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIFwiTGlua8O2cGluZ1wiOlxuICAgICAgICByZXN1bHQgPSBcIiNlMTU3NTlcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSBcIk1hbG3DtlwiOlxuICAgICAgICByZXN1bHQgPSBcIiM3NmI3YjJcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSBcIlVtZcOlXCI6XG4gICAgICAgIHJlc3VsdCA9IFwiIzU5MDBhMVwiXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlIFwiVsOkeGrDtlwiOlxuICAgICAgICByZXN1bHQgPSBcIiNlNzI5OGFcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSBcIsOWcmVicm9cIjpcbiAgICAgICAgcmVzdWx0ID0gXCIjZDk1ZjAyXCJcbiAgICAgICAgYnJlYWtcbiAgICAgIGNhc2UgJ0FyamVwbG9nJzpcbiAgICAgICAgcmVzdWx0ID0gXCIjZWRjOTQ5XCJcbiAgICAgICAgYnJlYWtcbiAgICAgIGNhc2UgJ0x1bmQnOlxuICAgICAgICByZXN1bHQgPSBcIiNhZjdhYTFcIlxuICAgICAgICBicmVha1xuICAgICAgY2FzZSAnU3RvY2tob2xtJzpcbiAgICAgICAgcmVzdWx0ID0gXCIjZmY5ZGE3XCJcbiAgICAgICAgYnJlYWtcbiAgICAgIGNhc2UgJ1VkZGV2YWxsYSc6XG4gICAgICAgIHJlc3VsdCA9IFwiIzljNzU1ZlwiXG4gICAgICAgIGJyZWFrXG4gICAgICBjYXNlICdVcHBzYWxhJzpcbiAgICAgICAgcmVzdWx0ID0gXCIjYmFiMGFiXCJcbiAgICAgICAgYnJlYWtcbiAgICB9XG4gICAgcmV0dXJuIHJlc3VsdFxuICB9XG5cbiAgZnVuY3Rpb24gZHJhdygpIHtcbiAgICBzdmcuc2VsZWN0QWxsKFwiY2lyY2xlXCIpXG4gICAgLmRhdGEoY29uZl9kYXRhX3dfeHkpXG4gICAgLmpvaW4oXCJjaXJjbGVcIilcbiAgICAuYXR0cihcInJcIiwgcmFkaXVzLTAuNSlcbiAgICAuYXR0cihcImN4XCIsIGQgPT4gZC54KVxuICAgIC5hdHRyKFwiY3lcIiwgZCA9PiBkLnkpXG4gICAgLmF0dHIoXCJmaWxsXCIsIGQgPT4gY29sb3IoZCkpXG4gICAgLnN0eWxlKCdzdHJva2UnLCAnYmxhY2snKVxuICAgIC5hcHBlbmQoJ3RpdGxlJykudGV4dCgoZCA9PiBgJHtkLm5hbWV9XFxuJHtkLnRvd259YCkpO1xuICAgIH1cblxuICAgIGZ1bmN0aW9uIHJlZHJhdygpIHtcbiAgICAgIHN2Zy5zZWxlY3RBbGwoXCJjaXJjbGVcIilcbiAgICAgICAgLmF0dHIoXCJjeFwiLCBkID0+IGQueClcbiAgICAgICAgLmF0dHIoXCJjeVwiLCBkID0+IGQueSlcbiAgICB9XG5cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuY2hhcnRXaWR0aCA9IDM1MDtcbmNoYXJ0SGVpZ2h0ID0gNzAwO1xuXG5wcm9qZWN0aW9uID0gZDMuZ2VvTWVyY2F0b3IoKVxuICAgICAgLnRyYW5zbGF0ZShbY2hhcnRXaWR0aCAvIDMsIGNoYXJ0SGVpZ2h0IC8gM10pXG4gICAgICAuZml0U2l6ZShbY2hhcnRXaWR0aCwgY2hhcnRIZWlnaHRdLCBnZW9zd2UpO1xuXG5wYXRoR2VuZXJhdG9yID0gZDMuZ2VvUGF0aChwcm9qZWN0aW9uKTtcbmJveCA9IHBhdGhHZW5lcmF0b3IuYm91bmRzKGdlb3N3ZSlcblxuZHJhd24gPSBkcmF3X2NpcmNsZXMoXG4gIGQzLm1pbihyYXdfcG9pbnRzLm1hcChkID0+IGQueWVhcikpLFxuICBkMy5tYXgocmF3X3BvaW50cy5tYXAoZCA9PiBkLmVuZCkpXG4pXG4ifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -720,236 +729,306 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/www\.digital-history\.se");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/www\.digital-history\.se");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -957,65 +1036,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
             }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
             const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
             const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
             let div = window.document.getElementById("code-annotation-line-highlight");
             if (div === null) {
               div = window.document.createElement("div");
@@ -1023,9 +1092,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
               div.style.position = 'absolute';
               parent.appendChild(div);
             }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1035,107 +1102,108 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
               const gutter = codeCell.querySelector('.code-annotation-gutter');
               gutter.appendChild(gutterDiv);
             }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
           }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
         };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
           }
-          popup.appendChild(citeDiv);
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
         });
-        return popup.innerHTML;
-      });
+      }
     }
-  }
-});
-</script>
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1146,7 +1214,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>v0.0.1</p>
+<p>v0.0.2</p>
 </div>
   </div>
 </footer>
