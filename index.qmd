@@ -6,8 +6,8 @@ css: custom.scss
 ```{ojs}
 //| echo: false
 
-d3 = require("d3")
-topojson = require("topojson")
+d3 = require("d3@7")
+topojson = require("topojson@3")
 ```
 
 ```{ojs}
@@ -186,7 +186,7 @@ function car (a) {
 ```{ojs}
 //| echo: false
 
-yaml = require('js-yaml')
+yaml = require('js-yaml@4')
 projaml = FileAttachment('./projects.yaml').text()
 confyaml = FileAttachment('./conference.yaml').text()
 
